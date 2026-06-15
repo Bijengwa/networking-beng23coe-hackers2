@@ -6,7 +6,7 @@
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:#d9dde4;font-family:"Courier New",monospace;color:#111827}
-.page{width:1420px;margin:0 auto;padding:18px}
+.page{width:1620px;margin:0 auto;padding:18px}
 .header{display:flex;justify-content:space-between;align-items:flex-end;background:#fff;border:3px solid #1e3a8a;border-radius:8px;padding:14px 18px;margin-bottom:12px;box-shadow:0 4px 10px rgba(0,0,0,.12)}
 .title-main{font-size:22px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#1e3a8a}
 .title-sub{font-size:11px;color:#475569;margin-top:5px;letter-spacing:1px}
@@ -83,66 +83,67 @@ body{background:#d9dde4;font-family:"Courier New",monospace;color:#111827}
 <script>
 const NS="http://www.w3.org/2000/svg";
 const PX=10;
-const PLAN={x:40,y:60,w:1320,h:620};
+const PLAN={x:60,y:80,w:1480,h:690};
+const CORRIDOR={y:400,h:50};
 const C={wall:"#111827",thin:"#334155",bg:"#fbfaf2",dim:"#111827",blue:"#2563eb",teal:"#0f766e",green:"#166534",purple:"#7c3aed",pink:"#be185d",rack:"#475569",outlet:"#facc15",fiber:"#f59e0b"};
 
 const floors=[
   {id:"ground",label:"GROUND FLOOR - COMPUTER ENGINEERING | LABS + MDF + ADMIN", rooms:[
-    lab("Computer Lab 1","12m x 10m","120m2",40,40,70,"Programming Basics"),
-    lab("Computer Lab 2","12m x 10m","120m2",40,470,70,"Web Development"),
-    itSupport(900,70),
-    lounge("Student Lounge","10m x 8m","80m2",40,430),
-    hodSuite(320,430),
-    staffRoom(620,430),
-    utilityBlock(900,430,"MDF / Core + WC + Store","MDF"),
-    exhibition(1080,430)
+    lab("Computer Lab 1","12m x 10m","120m2",40,60,100,"Programming Basics"),
+    lab("Computer Lab 2","12m x 10m","120m2",40,500,100,"Web Development"),
+    itSupport(940,100),
+    hodSuite(200,450),
+    staffRoom(450,450),
+    utilityBlock(720,450,"MDF / Core + WC + Store","MDF"),
+    lounge("Student Lounge","10m x 8m","80m2",940,450),
+    exhibition(1210,450)
   ]},
   {id:"first",label:"FIRST FLOOR - NETWORKING + RESEARCH + STAFF", rooms:[
-    lab("Computer Lab 3","12m x 10m","120m2",40,40,70,"Database Systems"),
-    lab("Computer Lab 4","12m x 10m","120m2",40,470,70,"Software Engineering"),
-    networkingLab(900,70),
-    researchLab(40,430),
-    lecturerOffices(360,430,"Lecturer Offices"),
-    staffRoom(650,430),
-    utilityBlock(930,430,"IDF + WC + Store","IDF"),
-    lounge("Student Lounge","10m x 7m","70m2",1110,430)
+    lab("Computer Lab 3","12m x 10m","120m2",40,60,100,"Database Systems"),
+    lab("Computer Lab 4","12m x 10m","120m2",40,500,100,"Software Engineering"),
+    networkingLab(940,100),
+    researchLab(200,450),
+    lecturerOffices(480,450,"Lecturer Offices"),
+    staffRoom(760,450),
+    utilityBlock(1030,450,"IDF + WC + Store","IDF"),
+    lounge("Student Lounge","10m x 7m","70m2",1250,450)
   ]},
   {id:"second",label:"SECOND FLOOR - CYBERSECURITY + SOFTWARE DEVELOPMENT", rooms:[
-    lab("Computer Lab 5","12m x 10m","120m2",40,40,70,"Cloud Computing"),
-    lab("Computer Lab 6","12m x 10m","120m2",40,470,70,"Mobile App Development"),
-    cyberLab(900,70),
-    softwareLab(40,430),
-    projectRooms(360,430),
-    lecturerOffices(650,430,"Staff Offices"),
-    utilityBlock(930,430,"IDF + WC + Store","IDF"),
-    lounge("Student Lounge","10m x 7m","70m2",1110,430)
+    lab("Computer Lab 5","12m x 10m","120m2",40,60,100,"Cloud Computing"),
+    lab("Computer Lab 6","12m x 10m","120m2",40,500,100,"Mobile App Development"),
+    cyberLab(940,100),
+    softwareLab(200,450),
+    projectRooms(480,450),
+    lecturerOffices(760,450,"Staff Offices"),
+    utilityBlock(1030,450,"IDF + WC + Store","IDF"),
+    lounge("Student Lounge","10m x 7m","70m2",1250,450)
   ]},
   {id:"third",label:"THIRD FLOOR - ADVANCED LABS + SEMINAR HALL", rooms:[
-    lab("Computer Lab 7","12m x 10m","120m2",40,40,70,"Data Science"),
-    lab("Computer Lab 8","12m x 10m","120m2",40,470,70,"AI / ML"),
-    advancedNetworking(900,70),
-    seminarHall(40,430),
-    lecturerOffices(650,430,"Faculty Offices"),
-    hodSuite(930,430),
-    utilityBlock(1130,430,"IDF + WC","IDF"),
+    lab("Computer Lab 7","12m x 10m","120m2",40,60,100,"Data Science"),
+    lab("Computer Lab 8","12m x 10m","120m2",40,500,100,"AI / ML"),
+    advancedNetworking(940,100),
+    seminarHall(200,450),
+    lecturerOffices(760,450,"Faculty Offices"),
+    hodSuite(1040,450),
+    utilityBlock(1290,450,"IDF + WC","IDF"),
   ]}
 ];
 
-function lab(name,size,area,cap,x,y,subject){return{type:"lab",name,size,area,cap,x,y,w:390,h:250,subject};}
-function itSupport(x,y){return{type:"it",name:"IT Support Department",size:"13m x 10m",area:"130m2",x,y,w:380,h:250};}
-function lounge(name,size,area,x,y){return{type:"lounge",name,size,area,x,y,w:250,h:180};}
-function hodSuite(x,y){return{type:"hod",name:"Secretary + HOD Suite",size:"10m x 5m",area:"50m2",x,y,w:260,h:180};}
-function staffRoom(x,y){return{type:"staff",name:"Staff Room",size:"10m x 7m",area:"70m2",x,y,w:260,h:180};}
-function utilityBlock(x,y,name,kind){return{type:"utility",name,size:"8m x 7m",area:"56m2",x,y,w:170,h:180,kind};}
-function exhibition(x,y){return{type:"exhibition",name:"Exhibition Area",size:"12m x 8m",area:"96m2",x,y,w:260,h:180};}
-function networkingLab(x,y){return{type:"networking",name:"Networking Lab",size:"12m x 10m",area:"120m2",x,y,w:380,h:250};}
-function researchLab(x,y){return{type:"research",name:"Research Lab",size:"12m x 8m",area:"96m2",x,y,w:280,h:180};}
-function lecturerOffices(x,y,name){return{type:"offices",name,size:"12m x 7m",area:"84m2",x,y,w:260,h:180};}
-function cyberLab(x,y){return{type:"cyber",name:"Cybersecurity Lab",size:"12m x 10m",area:"120m2",x,y,w:380,h:250};}
-function softwareLab(x,y){return{type:"software",name:"Software Development Lab",size:"12m x 8m",area:"96m2",x,y,w:280,h:180};}
-function projectRooms(x,y){return{type:"projects",name:"Project Rooms",size:"12m x 7m",area:"84m2",x,y,w:260,h:180};}
-function advancedNetworking(x,y){return{type:"advanced",name:"Advanced Networking Lab",size:"12m x 10m",area:"120m2",x,y,w:380,h:250};}
-function seminarHall(x,y){return{type:"seminar",name:"Seminar Hall",size:"15m x 10m",area:"150m2",x,y,w:560,h:180};}
+function lab(name,size,area,cap,x,y,subject){return{type:"lab",name,size,area,cap,x,y,w:440,h:300,subject};}
+function itSupport(x,y){return{type:"it",name:"IT Support Department",size:"16m x 10m",area:"160m2",x,y,w:600,h:300};}
+function lounge(name,size,area,x,y){return{type:"lounge",name,size,area,x,y,w:270,h:220};}
+function hodSuite(x,y){return{type:"hod",name:"Secretary + HOD Suite",size:"10m x 7m",area:"70m2",x,y,w:250,h:220};}
+function staffRoom(x,y){return{type:"staff",name:"Staff Room",size:"10m x 7m",area:"70m2",x,y,w:270,h:220};}
+function utilityBlock(x,y,name,kind){return{type:"utility",name,size:"8m x 7m",area:"56m2",x,y,w:220,h:220,kind};}
+function exhibition(x,y){return{type:"exhibition",name:"Exhibition Area",size:"12m x 7m",area:"84m2",x,y,w:330,h:220};}
+function networkingLab(x,y){return{type:"networking",name:"Networking Lab",size:"16m x 10m",area:"160m2",x,y,w:600,h:300};}
+function researchLab(x,y){return{type:"research",name:"Research Lab",size:"12m x 7m",area:"84m2",x,y,w:280,h:220};}
+function lecturerOffices(x,y,name){return{type:"offices",name,size:"12m x 7m",area:"84m2",x,y,w:280,h:220};}
+function cyberLab(x,y){return{type:"cyber",name:"Cybersecurity Lab",size:"16m x 10m",area:"160m2",x,y,w:600,h:300};}
+function softwareLab(x,y){return{type:"software",name:"Software Development Lab",size:"12m x 7m",area:"84m2",x,y,w:280,h:220};}
+function projectRooms(x,y){return{type:"projects",name:"Project Rooms",size:"12m x 7m",area:"84m2",x,y,w:280,h:220};}
+function advancedNetworking(x,y){return{type:"advanced",name:"Advanced Networking Lab",size:"16m x 10m",area:"160m2",x,y,w:600,h:300};}
+function seminarHall(x,y){return{type:"seminar",name:"Seminar Hall",size:"22m x 7m",area:"154m2",x,y,w:560,h:220};}
 
 function E(n,a={}){const e=document.createElementNS(NS,n);Object.entries(a).forEach(([k,v])=>e.setAttribute(k,v));return e}
 function T(p,x,y,s,t,a={}){const e=E("text",{x,y,"font-size":s,"font-family":"Courier New",...a});e.textContent=t;p.appendChild(e);return e}
@@ -152,8 +153,8 @@ function L(p,x1,y1,x2,y2,stroke=C.dim,sw=1,a={}){p.appendChild(E("line",{x1,y1,x
 function makeSvg(floor,idx){
   const wrap=document.createElement("div");wrap.className="floor-wrap";wrap.id=floor.id+"-floor";
   const bar=document.createElement("div");bar.className="floor-label-bar";bar.textContent=floor.label;wrap.appendChild(bar);
-  const svg=E("svg",{class:"floor-svg",viewBox:"0 0 1400 760",xmlns:NS});
-  defs(svg);R(svg,0,0,1400,760,"#f1f5f9","none",0);R(svg,PLAN.x,PLAN.y,PLAN.w,PLAN.h,C.bg,C.wall,8,3);
+  const svg=E("svg",{class:"floor-svg",viewBox:"0 0 1600 860",xmlns:NS});
+  defs(svg);R(svg,0,0,1600,860,"#f1f5f9","none",0);R(svg,PLAN.x,PLAN.y,PLAN.w,PLAN.h,C.bg,C.wall,8,3);
   grid(svg);mainCorridor(svg);stairs(svg);verticalRiser(svg,idx);floor.rooms.forEach(r=>drawRoom(svg,r,idx));
   outerDimensions(svg);floorDimensions(svg,idx);wrap.appendChild(svg);return wrap;
 }
@@ -164,14 +165,16 @@ function defs(svg){
   svg.appendChild(d);
 }
 function grid(svg){for(let x=PLAN.x;x<=PLAN.x+PLAN.w;x+=100)L(svg,x,PLAN.y,x,PLAN.y+PLAN.h,"#e2e8f0",.5);for(let y=PLAN.y;y<=PLAN.y+PLAN.h;y+=100)L(svg,PLAN.x,y,PLAN.x+PLAN.w,y,"#e2e8f0",.5);}
-function mainCorridor(svg){R(svg,PLAN.x,365,PLAN.w,55,"#e5e7eb","#64748b",1.5);L(svg,PLAN.x,392,PLAN.x+PLAN.w,392,"#334155",2,{"stroke-dasharray":"18,10"});T(svg,700,397,12,"MAIN CORRIDOR - 2500mm CLEAR WIDTH",{"text-anchor":"middle","font-weight":"700",fill:"#334155"});}
-function stairs(svg){R(svg,60,500,110,170,"#e5e7eb","#475569",2);T(svg,115,580,11,"STAIRWELL",{"text-anchor":"middle","font-weight":"700"});for(let y=515;y<660;y+=18)L(svg,60,y,170,y,"#94a3b8",1);dim(svg,60,680,170,680,"4.0m STAIR");}
-function verticalRiser(svg,idx){R(svg,180,505,55,80,"#fff7ed","#ea580c",2);T(svg,207,535,8,"CABLE",{"text-anchor":"middle","font-weight":"700",fill:"#9a3412"});T(svg,207,548,8,"RISER",{"text-anchor":"middle","font-weight":"700",fill:"#9a3412"});L(svg,207,505,207,95,C.fiber,3,{"stroke-dasharray":"8,5"});T(svg,230,105,8,idx===0?"MDF FIBER BACKBONE":"FIBER UPLINK",{"fill":C.fiber,"font-weight":"700"});}
+function mainCorridor(svg){R(svg,PLAN.x,CORRIDOR.y,PLAN.w,CORRIDOR.h,"#e5e7eb","#64748b",1.5);L(svg,PLAN.x,CORRIDOR.y+25,PLAN.x+PLAN.w,CORRIDOR.y+25,"#334155",2,{"stroke-dasharray":"18,10"});T(svg,800,CORRIDOR.y+30,12,"MAIN CORRIDOR - 2500mm CLEAR WIDTH",{"text-anchor":"middle","font-weight":"700",fill:"#334155"});}
+function stairs(svg){R(svg,66,560,120,190,"#e5e7eb","#475569",2);T(svg,126,642,11,"STAIRWELL",{"text-anchor":"middle","font-weight":"700"});for(let y=578;y<735;y+=19)L(svg,66,y,186,y,"#94a3b8",1);dim(svg,66,770,186,770,"4.0m STAIR");}
+function verticalRiser(svg,idx){R(svg,96,666,60,60,"#fff7ed","#ea580c",2);T(svg,126,692,8,"CABLE",{"text-anchor":"middle","font-weight":"700",fill:"#9a3412"});T(svg,126,705,8,"RISER",{"text-anchor":"middle","font-weight":"700",fill:"#9a3412"});L(svg,126,666,126,120,C.fiber,3,{"stroke-dasharray":"8,5"});T(svg,152,125,8,idx===0?"MDF FIBER BACKBONE":"FIBER UPLINK",{"fill":C.fiber,"font-weight":"700"});}
 
 function drawRoom(svg,r,idx){
   const fill={lab:"#fffef0",it:"#e0f2fe",lounge:"#fae8ff",hod:"#fef3c7",staff:"#ecfccb",utility:"#fef9c3",exhibition:"#f0fdf4",networking:"#eff6ff",research:"#f0fdf4",offices:"#ecfccb",cyber:"#fee2e2",software:"#e0f2fe",projects:"#e0e7ff",advanced:"#eff6ff",seminar:"#fff7ed"}[r.type]||"#fff";
   R(svg,r.x,r.y,r.w,r.h,fill,C.wall,2.5,0);label(svg,r);
-  windows(svg,r);door(svg,r.x+r.w/2, r.y+r.h, "up");
+  windows(svg,r);
+  const above=r.y<CORRIDOR.y;
+  door(svg,r.x+r.w/2, above?r.y+r.h:r.y, above?"up":"down");
   if(["lab"].includes(r.type)) labContent(svg,r);
   if(r.type==="it") itContent(svg,r);
   if(r.type==="lounge") loungeContent(svg,r);
@@ -190,12 +193,12 @@ function drawRoom(svg,r,idx){
   roomDims(svg,r);
 }
 function label(svg,r){T(svg,r.x+r.w/2,r.y+20,11,r.name,{"text-anchor":"middle","font-weight":"700",fill:"#111827"});T(svg,r.x+r.w/2,r.y+36,9,`${r.size} | ${r.area}${r.cap?` | Capacity ${r.cap}`:""}`,{"text-anchor":"middle",fill:"#334155"});}
-function windows(svg,r){const count=Math.max(1,Math.floor(r.w/150));for(let i=0;i<count;i++){const wx=r.x+40+i*(r.w-80)/(count);R(svg,wx,r.y-1,70,8,"#dbeafe","#2563eb",1);L(svg,wx+35,r.y-1,wx+35,r.y+7,"#2563eb",1)}}
+function windows(svg,r){const count=Math.max(1,Math.floor(r.w/180));const top=r.y<CORRIDOR.y;const y=top?r.y-1:r.y+r.h-7;for(let i=0;i<count;i++){const wx=r.x+48+i*(r.w-120)/Math.max(1,count-1);R(svg,wx,y,70,8,"#dbeafe","#2563eb",1);L(svg,wx+35,y,wx+35,y+8,"#2563eb",1)}}
 function door(svg,x,y,dir){L(svg,x-22,y,x+22,y,C.bg,7);const p=E("path",{d:dir==="up"?`M${x-22} ${y} Q${x} ${y-28} ${x+22} ${y}`:`M${x-22} ${y} Q${x} ${y+28} ${x+22} ${y}`,fill:"none",stroke:C.wall,"stroke-width":1.5});svg.appendChild(p);L(svg,x-22,y,x-22,dir==="up"?y-28:y+28,C.wall,1.5);}
 function dim(svg,x1,y1,x2,y2,label){L(svg,x1,y1,x2,y2,C.dim,1.2,{"marker-start":"url(#a1)","marker-end":"url(#a2)"});T(svg,(x1+x2)/2,(y1+y2)/2-5,8,label,{"text-anchor":"middle","font-weight":"700",fill:C.dim});}
-function roomDims(svg,r){dim(svg,r.x,r.y-12,r.x+r.w,r.y-12,r.size.split(" x ")[0]);L(svg,r.x-12,r.y,r.x-12,r.y+r.h,C.dim,1.1,{"marker-start":"url(#a1)","marker-end":"url(#a2)"});T(svg,r.x-24,r.y+r.h/2,8,r.size.split(" x ")[1]||"",{"text-anchor":"middle","font-weight":"700",transform:`rotate(-90 ${r.x-24} ${r.y+r.h/2})`});}
-function outerDimensions(svg){dim(svg,PLAN.x,735,PLAN.x+PLAN.w,735,"BUILDING WIDTH 72m");L(svg,18,PLAN.y,18,PLAN.y+PLAN.h,C.dim,1.3,{"marker-start":"url(#a1)","marker-end":"url(#a2)"});T(svg,10,380,9,"BUILDING LENGTH 34m",{"text-anchor":"middle","font-weight":"700",transform:"rotate(-90 10 380)"});}
-function floorDimensions(svg,idx){dim(svg,1030,360,1030,420,"2.5m CORRIDOR");T(svg,1210,725,9,`Floor ${idx+1}: all rooms show length, width and area; dimensions are schematic in metres`,{"text-anchor":"end",fill:"#475569"});}
+function roomDims(svg,r){const [len,wid]=(r.size||"").split(" x ");const y=r.y<CORRIDOR.y?r.y+50:r.y+r.h-20;dim(svg,r.x+18,y,r.x+r.w-18,y,len||"");const x=r.x+r.w-18;L(svg,x,r.y+50,x,r.y+r.h-18,C.dim,1,{"marker-start":"url(#a1)","marker-end":"url(#a2)"});T(svg,x-7,r.y+r.h/2,8,wid||"",{"text-anchor":"middle","font-weight":"700",transform:`rotate(-90 ${x-7} ${r.y+r.h/2})`});}
+function outerDimensions(svg){dim(svg,PLAN.x,825,PLAN.x+PLAN.w,825,"BUILDING WIDTH 72m");L(svg,24,PLAN.y,24,PLAN.y+PLAN.h,C.dim,1.3,{"marker-start":"url(#a1)","marker-end":"url(#a2)"});T(svg,14,425,9,"BUILDING LENGTH 34m",{"text-anchor":"middle","font-weight":"700",transform:"rotate(-90 14 425)"});}
+function floorDimensions(svg,idx){dim(svg,1220,CORRIDOR.y,1220,CORRIDOR.y+CORRIDOR.h,"2.5m CORRIDOR");T(svg,1410,810,9,`Floor ${idx+1}: architecture first, then network devices; room and workstation dimensions shown in metres/mm`,{"text-anchor":"end",fill:"#475569"});}
 
 function pc(svg,x,y,staff=false){R(svg,x,y,24,16,staff?C.teal:C.blue,staff?"#0d5e57":"#1e40af",1,1);R(svg,x+4,y+3,16,8,staff?"#5eead4":"#bfdbfe","none",0);R(svg,x+8,y+17,8,3,"#64748b","none",0);outlet(svg,x+30,y+5);}
 function outlet(svg,x,y){svg.appendChild(E("circle",{cx:x,cy:y,r:3,fill:C.outlet,stroke:"#854d0e","stroke-width":1}));}
@@ -208,12 +211,12 @@ function rack(svg,x,y,label="42U"){R(svg,x,y,38,70,C.rack,"#334155",1.5,2);for(l
 function eth(svg,x1,y1,x2,y2){L(svg,x1,y1,x2,y2,"#2563eb",.7,{"stroke-dasharray":"3,3",opacity:.55});}
 function ac(svg,x,y){R(svg,x,y,34,12,"#e0f2fe","#0284c7",1,2);T(svg,x+17,y+25,7,"AC",{"text-anchor":"middle",fill:"#0284c7","font-weight":"700"});}
 
-function labContent(svg,r){const sx=r.x+42,sy=r.y+70;T(svg,r.x+20,r.y+56,8,r.subject,{fill:"#475569"});let targets=[];for(let b=0;b<2;b++){for(let col=0;col<2;col++){for(let row=0;row<10;row++){const x=sx+b*175+col*50,y=sy+row*15;desk(svg,x-5,y-4,34,22);pc(svg,x,y);targets.push([x+30,y+5]);}}}R(svg,r.x+120,r.y+50,150,10,"#fff","#94a3b8",1);T(svg,r.x+195,r.y+58,7,"WHITEBOARD",{"text-anchor":"middle"});desk(svg,r.x+150,r.y+205,70,28);pc(svg,r.x+170,r.y+210,true);T(svg,r.x+185,r.y+248,7,"TEACHER AREA 3000mm",{"text-anchor":"middle",fill:"#0f766e"});sw(svg,r.x+r.w-62,r.y+56,"48p");wap(svg,r.x+18,r.y+58);printer(svg,r.x+r.w-66,r.y+122);cctv(svg,r.x+12,r.y+18);ac(svg,r.x+300,r.y+18);ac(svg,r.x+300,r.y+205);R(svg,r.x+26,r.y+224,150,8,"#facc15","#b45309",1);T(svg,r.x+100,r.y+240,7,"CABLE TRAY + 40 DATA/POWER OUTLETS",{"text-anchor":"middle",fill:"#92400e"});targets.slice(0,10).forEach(t=>eth(svg,t[0],t[1],r.x+r.w-40,r.y+67));}
-function itContent(svg,r){R(svg,r.x+18,r.y+58,115,120,"#fff","#94a3b8",1);T(svg,r.x+76,r.y+74,9,"RECEPTION",{"text-anchor":"middle","font-weight":"700"});desk(svg,r.x+38,r.y+92,58,34);pc(svg,r.x+50,r.y+100,true);printer(svg,r.x+98,r.y+96);R(svg,r.x+32,r.y+145,20,18,"#cbd5e1","#64748b",1);R(svg,r.x+58,r.y+145,20,18,"#cbd5e1","#64748b",1);R(svg,r.x+145,r.y+58,120,120,"#fff","#94a3b8",1);T(svg,r.x+205,r.y+74,9,"TECH ROOM",{"text-anchor":"middle","font-weight":"700"});for(let i=0;i<2;i++){desk(svg,r.x+160+i*50,r.y+96,40,32);pc(svg,r.x+168+i*50,r.y+104,true);}R(svg,r.x+160,r.y+145,85,18,"#d4a373","#a67c52",1);T(svg,r.x+202,r.y+158,7,"REPAIR BENCH",{"text-anchor":"middle"});R(svg,r.x+278,r.y+58,84,160,"#fff7ed","#ea580c",2);T(svg,r.x+320,r.y+74,9,"SERVER ROOM",{"text-anchor":"middle","font-weight":"700"});rack(svg,r.x+292,r.y+92,"42U");rack(svg,r.x+326,r.y+92,"NAS");sw(svg,r.x+294,r.y+178,"CORE");T(svg,r.x+320,r.y+212,7,"NO WINDOWS | BIOMETRIC DOOR",{"text-anchor":"middle",fill:"#9a3412"});wap(svg,r.x+20,r.y+205);cctv(svg,r.x+340,r.y+20);}
+function labContent(svg,r){const sx=r.x+44,sy=r.y+88;T(svg,r.x+22,r.y+66,8,r.subject,{fill:"#475569"});let outlets=[];for(let b=0;b<2;b++){for(let col=0;col<2;col++){for(let row=0;row<10;row++){const x=sx+b*202+col*48,y=sy+row*18;desk(svg,x-6,y-5,36,24);pc(svg,x,y);outlets.push([x+30,y+5]);}}}R(svg,r.x+125,r.y+64,190,11,"#fff","#94a3b8",1);T(svg,r.x+220,r.y+73,7,"WHITEBOARD",{"text-anchor":"middle"});desk(svg,r.x+176,r.y+248,76,30);pc(svg,r.x+195,r.y+254,true);T(svg,r.x+214,r.y+288,7,"TEACHER AREA 3000mm",{"text-anchor":"middle",fill:"#0f766e"});sw(svg,r.x+r.w-64,r.y+72,"48p");printer(svg,r.x+r.w-66,r.y+140);wap(svg,r.x+20,r.y+72);cctv(svg,r.x+14,r.y+18);ac(svg,r.x+r.w-86,r.y+18);ac(svg,r.x+r.w-86,r.y+236);R(svg,r.x+30,r.y+268,178,8,"#facc15","#b45309",1);T(svg,r.x+119,r.y+284,7,"CABLE TRAY + 40 DATA/POWER OUTLETS",{"text-anchor":"middle",fill:"#92400e"});L(svg,r.x+210,r.y+272,r.x+r.w-42,r.y+83,"#2563eb",1,{"stroke-dasharray":"5,4",opacity:.65});T(svg,r.x+330,r.y+116,7,"40 patch outlets to 48p switch",{"text-anchor":"middle",fill:"#1d4ed8"});dim(svg,r.x+54,r.y+250,r.x+102,r.y+250,"1200mm PC");dim(svg,r.x+54,r.y+222,r.x+54,r.y+250,"1500mm aisle");T(svg,r.x+82,r.y+238,7,"1000mm wall clearance",{fill:"#475569"});}
+function itContent(svg,r){const a=r.x+20,b=r.y+70;R(svg,a,b,170,190,"#fff","#94a3b8",1);T(svg,a+85,b+18,9,"RECEPTION",{"text-anchor":"middle","font-weight":"700"});desk(svg,a+44,b+54,70,38);pc(svg,a+58,b+64,true);printer(svg,a+118,b+60);R(svg,a+38,b+125,28,22,"#cbd5e1","#64748b",1);R(svg,a+74,b+125,28,22,"#cbd5e1","#64748b",1);dim(svg,a+14,b+170,a+156,b+170,"4.5m");R(svg,a+185,b,185,190,"#fff","#94a3b8",1);T(svg,a+277,b+18,9,"TECHNICIAN ROOM",{"text-anchor":"middle","font-weight":"700"});for(let i=0;i<3;i++){desk(svg,a+210+i*50,b+60,40,32);pc(svg,a+218+i*50,b+68,true);}R(svg,a+216,b+126,110,22,"#d4a373","#a67c52",1);T(svg,a+271,b+141,7,"REPAIR BENCH",{"text-anchor":"middle"});R(svg,a+385,b,175,210,"#fff7ed","#ea580c",2);T(svg,a+472,b+18,9,"SERVER ROOM",{"text-anchor":"middle","font-weight":"700"});rack(svg,a+415,b+50,"42U");rack(svg,a+460,b+50,"NAS");sw(svg,a+414,b+145,"CORE");T(svg,a+472,b+190,7,"1200mm FRONT CLEARANCE",{"text-anchor":"middle",fill:"#9a3412"});wap(svg,r.x+24,r.y+250);cctv(svg,r.x+r.w-36,r.y+20);}
 function loungeContent(svg,r){for(let i=0;i<3;i++)R(svg,r.x+25+i*70,r.y+75,56,28,"#c084fc","#9333ea",1,5);R(svg,r.x+70,r.y+120,75,32,"#a8a29e","#78716c",1,4);T(svg,r.x+108,r.y+140,8,"COFFEE",{"text-anchor":"middle"});R(svg,r.x+160,r.y+60,48,28,"#1e3a5f","#1e40af",1,3);T(svg,r.x+184,r.y+78,7,"TV",{"text-anchor":"middle",fill:"#fff"});wap(svg,r.x+r.w-42,r.y+50);cctv(svg,r.x+14,r.y+18);ac(svg,r.x+r.w-50,r.y+135);T(svg,r.x+r.w/2,r.y+166,7,"1200mm WALKING PATH",{"text-anchor":"middle",fill:"#701a75"});}
-function hodContent(svg,r){R(svg,r.x+12,r.y+52,95,116,"#fff","#94a3b8",1);T(svg,r.x+60,r.y+68,8,"SECRETARY",{"text-anchor":"middle","font-weight":"700"});desk(svg,r.x+28,r.y+86,54,34);pc(svg,r.x+38,r.y+94,true);printer(svg,r.x+72,r.y+125);R(svg,r.x+112,r.y+52,136,116,"#fff","#94a3b8",1);T(svg,r.x+180,r.y+68,8,"HOD OFFICE",{"text-anchor":"middle","font-weight":"700"});desk(svg,r.x+130,r.y+88,65,36);pc(svg,r.x+145,r.y+96,true);printer(svg,r.x+202,r.y+92);R(svg,r.x+135,r.y+135,82,24,"#a8a29e","#78716c",1);T(svg,r.x+176,r.y+151,7,"MEETING",{"text-anchor":"middle"});door(svg,r.x+110,r.y+110,"side");sw(svg,r.x+20,r.y+138,"8p");wap(svg,r.x+220,r.y+128);cctv(svg,r.x+232,r.y+58);}
-function staffContent(svg,r){for(let i=0;i<10;i++){const x=r.x+22+(i%5)*43,y=r.y+68+Math.floor(i/5)*48;desk(svg,x-5,y-5,34,28);pc(svg,x,y,true);}R(svg,r.x+92,r.y+132,76,32,"#a8a29e","#78716c",1);T(svg,r.x+130,r.y+152,7,"MEETING",{"text-anchor":"middle"});printer(svg,r.x+190,r.y+122);sw(svg,r.x+202,r.y+70,"24p");wap(svg,r.x+220,r.y+128);T(svg,r.x+r.w/2,r.y+166,7,"10 LECTURERS | 900mm CLEARANCE",{"text-anchor":"middle",fill:"#365314"});}
-function utilityContent(svg,r,idx){R(svg,r.x+10,r.y+50,70,112,"#fff7ed","#ea580c",1);T(svg,r.x+45,r.y+66,8,r.kind,{"text-anchor":"middle","font-weight":"700"});rack(svg,r.x+26,r.y+78,idx===0?"MDF":"IDF");R(svg,r.x+88,r.y+50,72,48,"#eff6ff","#64748b",1);T(svg,r.x+124,r.y+78,8,"MALE WC",{"text-anchor":"middle"});R(svg,r.x+88,r.y+105,72,48,"#fdf2f8","#64748b",1);T(svg,r.x+124,r.y+133,8,"FEMALE WC",{"text-anchor":"middle"});R(svg,r.x+10,r.y+166,70,10,"#facc15","#b45309",1);T(svg,r.x+45,r.y+185,7,"FIBER RISER",{"text-anchor":"middle",fill:"#b45309"});}
+function hodContent(svg,r){R(svg,r.x+12,r.y+58,100,142,"#fff","#94a3b8",1);T(svg,r.x+62,r.y+76,8,"SECRETARY",{"text-anchor":"middle","font-weight":"700"});desk(svg,r.x+30,r.y+102,56,36);pc(svg,r.x+42,r.y+111,true);printer(svg,r.x+66,r.y+155);R(svg,r.x+118,r.y+58,140,142,"#fff","#94a3b8",1);T(svg,r.x+188,r.y+76,8,"HOD OFFICE",{"text-anchor":"middle","font-weight":"700"});desk(svg,r.x+142,r.y+102,70,38);pc(svg,r.x+158,r.y+112,true);R(svg,r.x+150,r.y+156,82,28,"#a8a29e","#78716c",1);T(svg,r.x+191,r.y+174,7,"MEETING",{"text-anchor":"middle"});L(svg,r.x+113,r.y+120,r.x+113,r.y+164,C.bg,7);sw(svg,r.x+20,r.y+170,"8p");wap(svg,r.x+222,r.y+158);cctv(svg,r.x+238,r.y+70);}
+function staffContent(svg,r){for(let i=0;i<10;i++){const x=r.x+26+(i%5)*48,y=r.y+76+Math.floor(i/5)*54;desk(svg,x-6,y-5,36,28);pc(svg,x,y,true);}R(svg,r.x+96,r.y+150,82,34,"#a8a29e","#78716c",1);T(svg,r.x+137,r.y+171,7,"MEETING",{"text-anchor":"middle"});printer(svg,r.x+202,r.y+142);sw(svg,r.x+208,r.y+82,"24p");wap(svg,r.x+230,r.y+160);T(svg,r.x+r.w/2,r.y+202,7,"10 LECTURERS | 900mm CLEARANCE",{"text-anchor":"middle",fill:"#365314"});}
+function utilityContent(svg,r,idx){R(svg,r.x+12,r.y+58,86,142,"#fff7ed","#ea580c",1);T(svg,r.x+55,r.y+76,8,r.kind,{"text-anchor":"middle","font-weight":"700"});rack(svg,r.x+36,r.y+100,idx===0?"MDF":"IDF");T(svg,r.x+55,r.y+188,7,"1200mm CLR",{"text-anchor":"middle",fill:"#9a3412"});R(svg,r.x+106,r.y+58,100,62,"#eff6ff","#64748b",1);T(svg,r.x+156,r.y+94,8,"MALE WC",{"text-anchor":"middle"});R(svg,r.x+106,r.y+128,100,62,"#fdf2f8","#64748b",1);T(svg,r.x+156,r.y+164,8,"FEMALE WC",{"text-anchor":"middle"});R(svg,r.x+12,r.y+202,86,10,"#facc15","#b45309",1);T(svg,r.x+55,r.y+218,7,"FIBER RISER",{"text-anchor":"middle",fill:"#b45309"});}
 function exhibitionContent(svg,r){for(let i=0;i<4;i++){R(svg,r.x+20+i*58,r.y+70,48,65,"#dbeafe","#60a5fa",1,4);T(svg,r.x+44+i*58,r.y+106,8,"POSTER",{"text-anchor":"middle",fill:"#1e3a8a"});}R(svg,r.x+25,r.y+142,200,8,"#facc15","#b45309",1);T(svg,r.x+126,r.y+160,7,"POWER FLOOR BOXES + NETWORK PORTS",{"text-anchor":"middle",fill:"#92400e"});wap(svg,r.x+210,r.y+38);cctv(svg,r.x+18,r.y+22);}
 function networkingContent(svg,r){for(let i=0;i<25;i++){const x=r.x+28+(i%5)*42,y=r.y+68+Math.floor(i/5)*29;desk(svg,x-4,y-4,30,23);pc(svg,x,y);}for(let i=0;i<10;i++){R(svg,r.x+255+(i%2)*42,r.y+70+Math.floor(i/2)*28,32,18,"#854d0e","#713f12",1,2);T(svg,r.x+271+(i%2)*42,r.y+83+Math.floor(i/2)*28,6,i<5?"RTR":"SW",{"text-anchor":"middle",fill:"#fff"});}rack(svg,r.x+325,r.y+78,"TRG");sw(svg,r.x+318,r.y+170,"PATCH");wap(svg,r.x+20,r.y+210);cctv(svg,r.x+340,r.y+20);}
 function researchContent(svg,r){for(let i=0;i<20;i++){const x=r.x+25+(i%5)*42,y=r.y+62+Math.floor(i/5)*28;desk(svg,x-4,y-4,30,23);pc(svg,x,y,true);}rack(svg,r.x+210,r.y+70,"NAS");R(svg,r.x+200,r.y+145,60,18,"#475569","#334155",1);T(svg,r.x+230,r.y+158,7,"GPU",{"text-anchor":"middle",fill:"#fff"});wap(svg,r.x+230,r.y+20);}

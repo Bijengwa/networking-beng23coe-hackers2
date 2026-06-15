@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>XYZ Engineering College - Server Room Block Complete Network Floor Plan</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:#e0e0e0;font-family:'Courier New',monospace;}
+.page{width:1300px;margin:0 auto;padding:20px;}
+.header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:8px;border-bottom:3px solid #222;padding:15px 20px;background:#fff;border-radius:8px;}
+.title-main{font-size:20px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#1e3a5f;}
+.title-sub{font-size:11px;color:#555;letter-spacing:1px;margin-top:5px;}
+.meta{font-size:9px;color:#666;text-align:right;line-height:1.6;}
+.floor-label-bar{background:#1e3a5f;color:#fff;font-size:11px;font-weight:700;letter-spacing:3px;padding:8px 15px;text-transform:uppercase;margin-top:20px;margin-bottom:5px;border-radius:5px;}
+.floor-svg{display:block;width:100%;border:3px solid #1e3a5f;border-radius:8px;background:#f9f9f6;margin-bottom:25px;box-shadow:0 4px 8px rgba(0,0,0,0.1);}
+.legend{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px;border:2px solid #999;padding:12px 15px;background:#fff;border-radius:8px;}
+.legend-title{width:100%;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;border-bottom:2px solid #ddd;padding-bottom:6px;margin-bottom:8px;color:#1e3a5f;}
+.legend-item{display:flex;align-items:center;gap:8px;font-size:9px;color:#333;}
+.legend-icon{width:24px;height:24px;flex-shrink:0;}
+</style>
+</head>
+<body>
+<div class="page">
+
+<div class="header">
+  <div>
+    <div class="title-main">🖥️ XYZ Engineering College — Server Room Block (Data Center)</div>
+    <div class="title-sub">Complete Physical Network Floor Plan | Ground Floor Only | VLAN 100</div>
+  </div>
+  <div class="meta">
+    Course: Network Administration &amp; Management<br>
+    Program: BEng23CoE | Block 9 of 9<br>
+    📍 1 Floor | 👥 ~5 IT Staff | 🖧 VLAN 100<br>
+    📅 Week 1 — Physical Design | SERVER ROOM / DATA CENTER
+  </div>
+</div>
+
+<div class="floor-label-bar">🏢 SERVER ROOM BLOCK — Data Center | Core Network | Servers | Security</div>
+
+<svg class="floor-svg" viewBox="0 0 1300 680" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <pattern id="wall" width="4" height="4" patternUnits="userSpaceOnUse">
+    <rect width="4" height="4" fill="#555"/>
+    <rect width="2" height="2" fill="#888"/>
+  </pattern>
+</defs>
+
+<rect width="1300" height="680" fill="#f9f9f6"/>
+<rect x="10" y="10" width="1280" height="660" fill="none" stroke="#222" stroke-width="7" rx="2"/>
+
+<!-- MAIN CORRIDOR -->
+<line x1="10" y1="360" x2="1290" y2="360" stroke="#555" stroke-width="3" stroke-dasharray="8,4"/>
+<text x="650" y="378" text-anchor="middle" font-size="10" fill="#777" font-family="Courier New" letter-spacing="3">━━━━━━━━━━ MAIN CORRIDOR ━━━━━━━━━━</text>
+
+<!-- ============================================================ -->
+<!-- TOP ROW - Server Rooms -->
+<!-- ============================================================ -->
+
+<!-- ROOM 1: MAIN SERVER ROOM (MDF) - Core Network -->
+<rect x="15" y="15" width="380" height="345" fill="#1e3a5f" stroke="#1e40af" stroke-width="2.5"/>
+<line x1="175" y1="360" x2="215" y2="360" stroke="#f9f9f6" stroke-width="5"/>
+<path d="M175 360 Q195 340 215 360" fill="none" stroke="#555" stroke-width="1.5"/>
+<text x="205" y="35" text-anchor="middle" font-size="11" font-weight="700" fill="#ffffff" font-family="Courier New">MAIN SERVER ROOM (MDF)</text>
+<text x="205" y="52" text-anchor="middle" font-size="9" fill="#93c5fd" font-family="Courier New">Core Network | Campus Backbone | VLAN 100</text>
+
+<!-- Server Rack 1 -->
+<g transform="translate(30,70)">
+  <rect width="80" height="120" rx="3" fill="#475569" stroke="#334155" stroke-width="1.5"/>
+  <rect x="5" y="5" width="70" height="15" rx="1" fill="#6b7280"/>
+  <rect x="5" y="25" width="70" height="15" rx="1" fill="#6b7280"/>
+  <rect x="5" y="45" width="70" height="15" rx="1" fill="#6b7280"/>
+  <rect x="5" y="65" width="70" height="15" rx="1" fill="#6b7280"/>
+  <rect x="5" y="85" width="70" height="15" rx="1" fill="#6b7280"/>
+  <rect x="5" y="105" width="70" height="5" rx="1" fill="#4ade80"/>
+  <text x="40" y="140" text-anchor="middle" font-size="8" fill="#cbd5e1" font-family="Courier New">RACK 1</text>
+  <text x="40" y="152" text-anchor="middle" font-size="7" fill="#93c5fd" font-family="Courier New">Core Servers</text>
+</g>
+
+<!-- Server Rack 2 -->
+<g transform="translate(120,70)">
+  <rect width="80" height="120" rx="3" fill="#475569" stroke="#334155" stroke-width="1.5"/>
+  <rect x="5" y="5" width="70" height="15" rx="1" fill="#6b7280"/>
+  <rect x="5" y="25" width="70" height="15" rx="1" fill="#6b7280"/>
+  <rect x="5" y="45" width="70" height="15" rx="1" fill="#6b7280"/>
+  <rect x="5" y="65" width="70" height="15" rx="1" fill="#6b7280"/>
+  <rect x="5" y="85" width="70" height="15" rx="1" fill="#6b7280"/>
+  <rect x="5" y="105" width="70" height="5" rx="1" fill="#4ade80"/>
+  <text x="40" y="140" text-anchor="middle" font-size="8" fill="#cbd5e1" font-family="Courier New">RACK 2</text>
+  <text x="40" y="152" text-anchor="middle" font-size="7" fill="#93c5fd" font-family="Courier New">App Servers</text>
+</g>
+
+<!-- Server Rack 3 -->
+<g transform="translate(210,70)">
+  <rect width="80" height="120" rx="3" fill="#475569" stroke="#334155" stroke-width="1.5"/>
+  <rect x="5" y="5" width="70" height="15" rx="1" fill="#6b7280"/>
+  <rect x="5" y="25" width="70" height="15" rx="1" fill="#6b7280"/>
+  <rect x="5" y="45" width="70" height="15" rx="1" fill="#6b7280"/>
+  <rect x="5" y="65" width="70" height="15" rx="1" fill="#6b7280"/>
+  <rect x="5" y="85" width="70" height="15" rx="1" fill="#6b7280"/>
+  <rect x="5" y="105" width="70" height="5" rx="1" fill="#4ade80"/>
+  <text x="40" y="140" text-anchor="middle" font-size="8" fill="#cbd5e1" font-family="Courier New">RACK 3</text>
+  <text x="40" y="152" text-anchor="middle" font-size="7" fill="#93c5fd" font-family="Courier New">Storage</text>
+</g>
+
+<!-- Core Switch Stack -->
+<g transform="translate(30,200)">
+  <rect width="80" height="60" rx="3" fill="#166534" stroke="#14532d" stroke-width="1.5"/>
+  <rect x="5" y="5" width="15" height="15" rx="2" fill="#4ade80"/>
+  <rect x="25" y="5" width="15" height="15" rx="2" fill="#4ade80"/>
+  <rect x="45" y="5" width="15" height="15" rx="2" fill="#86efac"/>
+  <rect x="65" y="5" width="10" height="15" rx="2" fill="#4ade80"/>
+  <rect x="5" y="25" width="15" height="15" rx="2" fill="#4ade80"/>
+  <rect x="25" y="25" width="15" height="15" rx="2" fill="#4ade80"/>
+  <rect x="45" y="25" width="15" height="15" rx="2" fill="#86efac"/>
+  <rect x="65" y="25" width="10" height="15" rx="2" fill="#4ade80"/>
+  <text x="40" y="75" text-anchor="middle" font-size="7" fill="#4ade80" font-family="Courier New">CORE SW</text>
+  <text x="40" y="85" text-anchor="middle" font-size="6" fill="#86efac" font-family="Courier New">Stack</text>
+</g>
+
+<!-- Firewall Cluster -->
+<g transform="translate(120,200)">
+  <rect width="80" height="60" rx="3" fill="#854d0e" stroke="#713f12" stroke-width="1.5"/>
+  <rect x="5" y="5" width="30" height="25" rx="2" fill="#fef3c7"/>
+  <text x="20" y="22" text-anchor="middle" font-size="9" fill="#92400e" font-family="Courier New" font-weight="700">FW1</text>
+  <rect x="45" y="5" width="30" height="25" rx="2" fill="#fef3c7"/>
+  <text x="60" y="22" text-anchor="middle" font-size="9" fill="#92400e" font-family="Courier New" font-weight="700">FW2</text>
+  <rect x="5" y="35" width="70" height="20" rx="2" fill="#fef9c3"/>
+  <text x="40" y="49" text-anchor="middle" font-size="6" fill="#92400e" font-family="Courier New">Active-Passive</text>
+  <text x="40" y="75" text-anchor="middle" font-size="7" fill="#fbbf24" font-family="Courier New">FIREWALL</text>
+</g>
+
+<!-- Distribution Switch -->
+<g transform="translate(210,200)">
+  <rect width="80" height="60" rx="3" fill="#166534" stroke="#14532d" stroke-width="1.5"/>
+  <rect x="5" y="5" width="15" height="15" rx="2" fill="#4ade80"/>
+  <rect x="25" y="5" width="15" height="15" rx="2" fill="#4ade80"/>
+  <rect x="45" y="5" width="15" height="15" rx="2" fill="#86efac"/>
+  <rect x="65" y="5" width="10" height="15" rx="2" fill="#4ade80"/>
+  <rect x="5" y="25" width="15" height="15" rx="2" fill="#4ade80"/>
+  <rect x="25" y="25" width="15" height="15" rx="2" fill="#4ade80"/>
+  <rect x="45" y="25" width="15" height="15" rx="2" fill="#86efac"/>
+  <rect x="65" y="25" width="10" height="15" rx="2" fill="#4ade80"/>
+  <text x="40" y="75" text-anchor="middle" font-size="7" fill="#4ade80" font-family="Courier New">DIST SW</text>
+</g>
+
+<!-- UPS / Power Backup -->
+<g transform="translate(30,275)">
+  <rect width="80" height="70" rx="3" fill="#475569" stroke="#334155" stroke-width="1.5"/>
+  <rect x="5" y="5" width="70" height="15" rx="1" fill="#6b7280"/>
+  <rect x="5" y="25" width="70" height="15" rx="1" fill="#6b7280"/>
+  <rect x="5" y="45" width="70" height="15" rx="1" fill="#6b7280"/>
+  <text x="40" y="55" text-anchor="middle" font-size="7" fill="#fbbf24" font-family="Courier New">⚡ UPS</text>
+  <text x="40" y="82" text-anchor="middle" font-size="6" fill="#cbd5e1" font-family="Courier New">Power Backup</text>
+</g>
+
+<!-- Generator Panel -->
+<g transform="translate(120,275)">
+  <rect width="80" height="70" rx="3" fill="#475569" stroke="#334155" stroke-width="1.5"/>
+  <rect x="5" y="5" width="70" height="15" rx="1" fill="#6b7280"/>
+  <rect x="5" y="25" width="70" height="15" rx="1" fill="#6b7280"/>
+  <text x="40" y="40" text-anchor="middle" font-size="7" fill="#fbbf24" font-family="Courier New">🔄 GEN</text>
+  <text x="40" y="82" text-anchor="middle" font-size="6" fill="#cbd5e1" font-family="Courier New">Generator</text>
+</g>
+
+<!-- HVAC / Cooling -->
+<g transform="translate(210,275)">
+  <rect width="80" height="70" rx="3" fill="#475569" stroke="#334155" stroke-width="1.5"/>
+  <rect x="5" y="5" width="70" height="15" rx="1" fill="#6b7280"/>
+  <rect x="5" y="25" width="70" height="15" rx="1" fill="#6b7280"/>
+  <text x="40" y="40" text-anchor="middle" font-size="7" fill="#60a5fa" font-family="Courier New">❄️ HVAC</text>
+  <text x="40" y="82" text-anchor="middle" font-size="6" fill="#cbd5e1" font-family="Courier New">Cooling</text>
+</g>
+
+<!-- CCTV -->
+<g transform="translate(25,25)">
+  <rect width="16" height="12" rx="2" fill="#0369a1" stroke="#075985" stroke-width="0.8"/>
+  <circle cx="8" cy="6" r="3.5" fill="#7dd3fc"/>
+  <circle cx="8" cy="6" r="2" fill="#0c4a6e"/>
+  <text x="8" y="22" text-anchor="middle" font-size="6" fill="#0369a1" font-family="Courier New">CCTV</text>
+</g>
+
+<g transform="translate(350,200)">
+  <circle cx="12" cy="12" r="12" fill="#7c3aed" stroke="#5b21b6" stroke-width="1"/>
+  <path d="M6 12 Q12 5 18 12" fill="none" stroke="#fff" stroke-width="1.5"/>
+  <text x="12" y="32" text-anchor="middle" font-size="7" fill="#7c3aed" font-family="Courier New">WAP</text>
+</g>
+
+<!-- ROOM 2: NETWORK OPERATIONS CENTER (NOC) -->
+<rect x="400" y="15" width="420" height="345" fill="#0f766e" stroke="#0d5e57" stroke-width="2.5"/>
+<line x1="580" y1="360" x2="620" y2="360" stroke="#f9f9f6" stroke-width="5"/>
+<path d="M580 360 Q600 340 620 360" fill="none" stroke="#555" stroke-width="1.5"/>
+<text x="610" y="35" text-anchor="middle" font-size="11" font-weight="700" fill="#ffffff" font-family="Courier New">NETWORK OPERATIONS CENTER (NOC)</text>
+<text x="610" y="52" text-anchor="middle" font-size="9" fill="#5eead4" font-family="Courier New">24/7 Monitoring | Network Management | VLAN 100</text>
+
+<!-- Monitoring Wall (Large Screen Display) -->
+<g transform="translate(420,70)">
+  <rect width="200" height="80" rx="3" fill="#1e3a5f" stroke="#1e40af" stroke-width="1.5"/>
+  <rect x="5" y="5" width="190" height="70" rx="2" fill="#1d4ed8"/>
+  <text x="100" y="45" text-anchor="middle" font-size="12" font-weight="700" fill="#60a5fa" font-family="Courier New">MONITORING DASHBOARD</text>
+</g>
+
+<!-- NOC Workstations -->
+<g transform="translate(420,165)">
+  <rect width="28" height="20" rx="1" fill="#1d4ed8" stroke="#1e3a8a" stroke-width="1"/>
+  <rect x="3" y="2" width="22" height="12" rx="0.5" fill="#93c5fd"/>
+  <rect x="9" y="15" width="10" height="3" fill="#3b82f6"/>
+  <text x="14" y="34" text-anchor="middle" font-size="7" fill="#1d4ed8" font-family="Courier New">NOC1</text>
+</g>
+<g transform="translate(460,165)">
+  <rect width="28" height="20" rx="1" fill="#1d4ed8" stroke="#1e3a8a" stroke-width="1"/>
+  <rect x="3" y="2" width="22" height="12" rx="0.5" fill="#93c5fd"/>
+  <rect x="9" y="15" width="10" height="3" fill="#3b82f6"/>
+  <text x="14" y="34" text-anchor="middle" font-size="7" fill="#1d4ed8" font-family="Courier New">NOC2</text>
+</g>
+<g transform="translate(500,165)">
+  <rect width="28" height="20" rx="1" fill="#1d4ed8" stroke="#1e3a8a" stroke-width="1"/>
+  <rect x="3" y="2" width="22" height="12" rx="0.5" fill="#93c5fd"/>
+  <rect x="9" y="15" width="10" height="3" fill="#3b82f6"/>
+  <text x="14" y="34" text-anchor="middle" font-size="7" fill="#1d4ed8" font-family="Courier New">NOC3</text>
+</g>
+
+<!-- Additional Monitoring Displays -->
+<g transform="translate(540,165)">
+  <rect width="28" height="20" rx="1" fill="#1d4ed8" stroke="#1e3a8a" stroke-width="1"/>
+  <rect x="3" y="2" width="22" height="12" rx="0.5" fill="#93c5fd"/>
+  <rect x="9" y="15" width="10" height="3" fill="#3b82f6"/>
+  <text x="14" y="34" text-anchor="middle" font-size="7" fill="#1d4ed8" font-family="Courier New">NOC4</text>
+</g>
+<g transform="translate(580,165)">
+  <rect width="28" height="20" rx="1" fill="#1d4ed8" stroke="#1e3a8a" stroke-width="1"/>
+  <rect x="3" y="2" width="22" height="12" rx="0.5" fill="#93c5fd"/>
+  <rect x="9" y="15" width="10" height="3" fill="#3b82f6"/>
+  <text x="14" y="34" text-anchor="middle" font-size="7" fill="#1d4ed8" font-family="Courier New">NOC5</text>
+</g>
+
+<!-- NOC Switch -->
+<g transform="translate(630,165)">
+  <rect width="35" height="18" rx="3" fill="#166534" stroke="#14532d" stroke-width="1"/>
+  <rect x="3" y="4" width="5" height="10" rx="1" fill="#4ade80"/>
+  <rect x="10" y="4" width="5" height="10" rx="1" fill="#4ade80"/>
+  <rect x="17" y="4" width="5" height="10" rx="1" fill="#86efac"/>
+  <rect x="24" y="4" width="5" height="10" rx="1" fill="#4ade80"/>
+  <text x="17" y="32" text-anchor="middle" font-size="6" fill="#166534" font-family="Courier New">SW</text>
+</g>
+
+<g transform="translate(680,165)">
+  <circle cx="12" cy="12" r="12" fill="#7c3aed" stroke="#5b21b6" stroke-width="1"/>
+  <path d="M6 12 Q12 5 18 12" fill="none" stroke="#fff" stroke-width="1.5"/>
+  <text x="12" y="32" text-anchor="middle" font-size="7" fill="#7c3aed" font-family="Courier New">WAP</text>
+</g>
+
+<!-- NOC Seating -->
+<rect x="420" y="195" width="220" height="40" rx="3" fill="#a8a29e" stroke="#78716c" stroke-width="1"/>
+<text x="530" y="220" text-anchor="middle" font-size="8" fill="#44403c" font-family="Courier New" font-weight="700">OPERATOR CONSOLE</text>
+
+<!-- KVM Console -->
+<g transform="translate(420,245)">
+  <rect width="60" height="40" rx="3" fill="#475569" stroke="#334155" stroke-width="1"/>
+  <rect x="5" y="5" width="50" height="15" rx="1" fill="#6b7280"/>
+  <text x="30" y="58" text-anchor="middle" font-size="6" fill="#cbd5e1" font-family="Courier New">KVM</text>
+</g>
+
+<!-- Printer / Documentation -->
+<g transform="translate(500,245)">
+  <rect width="35" height="25" rx="2" fill="#be185d" stroke="#9d174d" stroke-width="1"/>
+  <rect x="5" y="4" width="25" height="12" rx="1" fill="#fdf2f8"/>
+  <rect x="8" y="18" width="19" height="5" rx="1" fill="#fbcfe8"/>
+  <text x="17" y="40" text-anchor="middle" font-size="7" fill="#be185d" font-family="Courier New">PRINTER</text>
+</g>
+
+<!-- Documentation Shelves -->
+<g transform="translate(555,245)">
+  <rect width="40" height="40" rx="2" fill="#d4a373" stroke="#a67c52" stroke-width="1"/>
+  <line x1="555" y1="255" x2="595" y2="255" stroke="#a67c52" stroke-width="0.8"/>
+  <line x1="555" y1="265" x2="595" y2="265" stroke="#a67c52" stroke-width="0.8"/>
+  <text x="575" y="295" text-anchor="middle" font-size="6" fill="#92400e" font-family="Courier New">DOCS</text>
+</g>
+
+<!-- CCTV -->
+<g transform="translate(410,25)">
+  <rect width="16" height="12" rx="2" fill="#0369a1" stroke="#075985" stroke-width="0.8"/>
+  <circle cx="8" cy="6" r="3.5" fill="#7dd3fc"/>
+  <circle cx="8" cy="6" r="2" fill="#0c4a6e"/>
+  <text x="8" y="22" text-anchor="middle" font-size="6" fill="#0369a1" font-family="Courier New">CCTV</text>
+</g>
+
+<!-- ROOM 3: DISASTER RECOVERY / BACKUP ROOM -->
+<rect x="825" y="15" width="230" height="345" fill="#475569" stroke="#334155" stroke-width="2.5"/>
+<line x1="910" y1="360" x2="950" y2="360" stroke="#f9f9f6" stroke-width="5"/>
+<path d="M910 360 Q930 340 950 360" fill="none" stroke="#555" stroke-width="1.5"/>
+<text x="940" y="35" text-anchor="middle" font-size="9" font-weight="700" fill="#cbd5e1" font-family="Courier New">DISASTER RECOVERY</text>
+<text x="940" y="50" text-anchor="middle" font-size="8" fill="#9ca3af" font-family="Courier New">Backup Servers | VLAN 100</text>
+
+<!-- Backup Server Racks -->
+<g transform="translate(840,70)">
+  <rect width="60" height="100" rx="3" fill="#374151" stroke="#1f2937" stroke-width="1.5"/>
+  <rect x="5" y="5" width="50" height="12" rx="1" fill="#6b7280"/>
+  <rect x="5" y="22" width="50" height="12" rx="1" fill="#6b7280"/>
+  <rect x="5" y="39" width="50" height="12" rx="1" fill="#6b7280"/>
+  <rect x="5" y="56" width="50" height="12" rx="1" fill="#6b7280"/>
+  <rect x="5" y="73" width="50" height="12" rx="1" fill="#6b7280"/>
+  <text x="30" y="115" text-anchor="middle" font-size="7" fill="#cbd5e1" font-family="Courier New">BACKUP</text>
+</g>
+
+<g transform="translate(910,70)">
+  <rect width="60" height="100" rx="3" fill="#374151" stroke="#1f2937" stroke-width="1.5"/>
+  <rect x="5" y="5" width="50" height="12" rx="1" fill="#6b7280"/>
+  <rect x="5" y="22" width="50" height="12" rx="1" fill="#6b7280"/>
+  <rect x="5" y="39" width="50" height="12" rx="1" fill="#6b7280"/>
+  <rect x="5" y="56" width="50" height="12" rx="1" fill="#6b7280"/>
+  <text x="30" y="115" text-anchor="middle" font-size="7" fill="#cbd5e1" font-family="Courier New">TAPE</text>
+</g>
+
+<g transform="translate(840,185)">
+  <rect width="60" height="50" rx="3" fill="#374151" stroke="#1f2937" stroke-width="1.5"/>
+  <rect x="5" y="5" width="50" height="15" rx="1" fill="#6b7280"/>
+  <rect x="5" y="25" width="50" height="15" rx="1" fill="#6b7280"/>
+  <text x="30" y="52" text-anchor="middle" font-size="6" fill="#cbd5e1" font-family="Courier New">NAS</text>
+</g>
+
+<g transform="translate(910,185)">
+  <rect width="60" height="50" rx="3" fill="#374151" stroke="#1f2937" stroke-width="1.5"/>
+  <rect x="5" y="5" width="50" height="15" rx="1" fill="#6b7280"/>
+  <text x="30" y="25" text-anchor="middle" font-size="6" fill="#cbd5e1" font-family="Courier New">UPS</text>
+</g>
+
+<g transform="translate(840,250)">
+  <circle cx="12" cy="12" r="12" fill="#7c3aed" stroke="#5b21b6" stroke-width="1"/>
+  <path d="M6 12 Q12 5 18 12" fill="none" stroke="#fff" stroke-width="1.5"/>
+  <text x="12" y="32" text-anchor="middle" font-size="7" fill="#7c3aed" font-family="Courier New">WAP</text>
+</g>
+
+<g transform="translate(835,25)">
+  <rect width="16" height="12" rx="2" fill="#0369a1" stroke="#075985" stroke-width="0.8"/>
+  <circle cx="8" cy="6" r="3.5" fill="#7dd3fc"/>
+  <circle cx="8" cy="6" r="2" fill="#0c4a6e"/>
+  <text x="8" y="22" text-anchor="middle" font-size="6" fill="#0369a1" font-family="Courier New">CCTV</text>
+</g>
+
+<!-- ROOM 4: STAGING / EQUIPMENT ROOM -->
+<rect x="1060" y="15" width="230" height="170" fill="#e5e7eb" stroke="#6b7280" stroke-width="2.5"/>
+<text x="1175" y="35" text-anchor="middle" font-size="10" font-weight="700" fill="#374151" font-family="Courier New">STAGING / EQUIPMENT</text>
+<text x="1175" y="50" text-anchor="middle" font-size="9" fill="#4b5563" font-family="Courier New">Hardware Testing | VLAN 100</text>
+
+<!-- Workbench -->
+<g transform="translate(1080,70)">
+  <rect width="150" height="40" rx="3" fill="#a8a29e" stroke="#78716c" stroke-width="1"/>
+  <text x="1155" y="95" text-anchor="middle" font-size="8" fill="#44403c" font-family="Courier New" font-weight="700">WORKBENCH</text>
+</g>
+
+<!-- Test Equipment -->
+<g transform="translate(1080,120)">
+  <rect width="40" height="30" rx="3" fill="#475569" stroke="#334155" stroke-width="1"/>
+  <rect x="5" y="5" width="30" height="10" rx="1" fill="#6b7280"/>
+  <text x="20" y="48" text-anchor="middle" font-size="6" fill="#cbd5e1" font-family="Courier New">OSCI</text>
+</g>
+<g transform="translate(1130,120)">
+  <rect width="40" height="30" rx="3" fill="#475569" stroke="#334155" stroke-width="1"/>
+  <rect x="5" y="5" width="30" height="10" rx="1" fill="#6b7280"/>
+  <text x="20" y="48" text-anchor="middle" font-size="6" fill="#cbd5e1" font-family="Courier New">MULTI</text>
+</g>
+<g transform="translate(1180,120)">
+  <rect width="40" height="30" rx="3" fill="#475569" stroke="#334155" stroke-width="1"/>
+  <rect x="5" y="5" width="30" height="10" rx="1" fill="#6b7280"/>
+  <text x="20" y="48" text-anchor="middle" font-size="6" fill="#cbd5e1" font-family="Courier New">PWR</text>
+</g>
+
+<g transform="translate(1230,120)">
+  <circle cx="10" cy="10" r="10" fill="#7c3aed" stroke="#5b21b6" stroke-width="1"/>
+  <path d="M5 10 Q10 4 15 10" fill="none" stroke="#fff" stroke-width="1.2"/>
+  <text x="10" y="28" text-anchor="middle" font-size="6" fill="#7c3aed" font-family="Courier New">WAP</text>
+</g>
+
+<g transform="translate(1070,25)">
+  <rect width="16" height="12" rx="2" fill="#0369a1" stroke="#075985" stroke-width="0.8"/>
+  <circle cx="8" cy="6" r="3.5" fill="#7dd3fc"/>
+  <circle cx="8" cy="6" r="2" fill="#0c4a6e"/>
+  <text x="8" y="22" text-anchor="middle" font-size="6" fill="#0369a1" font-family="Courier New">CCTV</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- BOTTOM ROW - Server Room Block -->
+<!-- ============================================================ -->
+
+<!-- TELECOM ROOM (Demarcation Point) -->
+<rect x="15" y="375" width="230" height="150" fill="#fef9c3" stroke="#ca8a04" stroke-width="2.5"/>
+<text x="130" y="400" text-anchor="middle" font-size="10" font-weight="700" fill="#713f12" font-family="Courier New">TELECOM ROOM</text>
+<text x="130" y="415" text-anchor="middle" font-size="9" fill="#854d0e" font-family="Courier New">ISP Demarc | MPLS Router</text>
+
+<!-- ISP Router -->
+<g transform="translate(30,435)">
+  <rect width="60" height="30" rx="3" fill="#d97706" stroke="#b45309" stroke-width="1"/>
+  <rect x="5" y="5" width="15" height="10" rx="1" fill="#fbbf24"/>
+  <rect x="25" y="5" width="15" height="10" rx="1" fill="#fbbf24"/>
+  <rect x="45" y="5" width="10" height="10" rx="1" fill="#fef3c7"/>
+  <text x="30" y="48" text-anchor="middle" font-size="7" fill="#92400e" font-family="Courier New">ISP RTR</text>
+</g>
+
+<!-- Fiber Patch Panel -->
+<g transform="translate(105,435)">
+  <rect width="60" height="30" rx="3" fill="#374151" stroke="#1f2937" stroke-width="1"/>
+  <rect x="5" y="5" width="10" height="20" rx="1" fill="#6b7280"/>
+  <rect x="20" y="5" width="10" height="20" rx="1" fill="#6b7280"/>
+  <rect x="35" y="5" width="10" height="20" rx="1" fill="#6b7280"/>
+  <rect x="50" y="5" width="5" height="20" rx="1" fill="#6b7280"/>
+  <text x="30" y="48" text-anchor="middle" font-size="6" fill="#cbd5e1" font-family="Courier New">FIBER PATCH</text>
+</g>
+
+<g transform="translate(180,435)">
+  <circle cx="10" cy="10" r="10" fill="#7c3aed" stroke="#5b21b6" stroke-width="1"/>
+  <path d="M5 10 Q10 4 15 10" fill="none" stroke="#fff" stroke-width="1.2"/>
+  <text x="10" y="28" text-anchor="middle" font-size="6" fill="#7c3aed" font-family="Courier New">WAP</text>
+</g>
+
+<g transform="translate(25,380)">
+  <rect width="16" height="12" rx="2" fill="#0369a1" stroke="#075985" stroke-width="0.8"/>
+  <circle cx="8" cy="6" r="3.5" fill="#7dd3fc"/>
+  <circle cx="8" cy="6" r="2" fill="#0c4a6e"/>
+  <text x="8" y="22" text-anchor="middle" font-size="6" fill="#0369a1" font-family="Courier New">CCTV</text>
+</g>
+
+<!-- BREAK ROOM (Staff Pantry) -->
+<rect x="250" y="375" width="200" height="150" fill="#fae8ff" stroke="#a21caf" stroke-width="2.5"/>
+<text x="350" y="400" text-anchor="middle" font-size="10" font-weight="700" fill="#701a75" font-family="Courier New">STAFF BREAK ROOM</text>
+<text x="350" y="415" text-anchor="middle" font-size="9" fill="#86198f" font-family="Courier New">IT Staff Only | VLAN 100</text>
+
+<rect x="265" y="435" width="50" height="40" rx="3" fill="#c084fc" stroke="#9333ea" stroke-width="1"/>
+<text x="290" y="460" text-anchor="middle" font-size="7" fill="#4c1d95" font-family="Courier New">TABLE</text>
+<rect x="325" y="435" width="50" height="40" rx="3" fill="#c084fc" stroke="#9333ea" stroke-width="1"/>
+<text x="350" y="460" text-anchor="middle" font-size="7" fill="#4c1d95" font-family="Courier New">TABLE</text>
+
+<g transform="translate(390,435)">
+  <rect width="40" height="40" rx="3" fill="#475569" stroke="#334155" stroke-width="1"/>
+  <rect x="5" y="5" width="30" height="15" rx="1" fill="#6b7280"/>
+  <text x="20" y="55" text-anchor="middle" font-size="6" fill="#cbd5e1" font-family="Courier New">FRIDGE</text>
+</g>
+
+<g transform="translate(390,380)">
+  <circle cx="10" cy="10" r="10" fill="#7c3aed" stroke="#5b21b6" stroke-width="1"/>
+  <path d="M5 10 Q10 4 15 10" fill="none" stroke="#fff" stroke-width="1.2"/>
+  <text x="10" y="28" text-anchor="middle" font-size="6" fill="#7c3aed" font-family="Courier New">WAP</text>
+</g>
+
+<!-- IT MANAGER OFFICE -->
+<rect x="455" y="375" width="200" height="150" fill="#fef3c7" stroke="#b45309" stroke-width="2.5"/>
+<text x="555" y="400" text-anchor="middle" font-size="10" font-weight="700" fill="#713f12" font-family="Courier New">IT MANAGER OFFICE</text>
+<text x="555" y="415" text-anchor="middle" font-size="9" fill="#92400e" font-family="Courier New">IT Administration | VLAN 100</text>
+
+<g transform="translate(470,435)">
+  <rect width="28" height="20" rx="1" fill="#0f766e" stroke="#0d5e57" stroke-width="1"/>
+  <rect x="3" y="2" width="22" height="12" rx="0.5" fill="#5eead4"/>
+  <rect x="9" y="15" width="10" height="3" fill="#14b8a6"/>
+  <text x="14" y="34" text-anchor="middle" font-size="7" fill="#0f766e" font-family="Courier New">MGR PC</text>
+</g>
+<g transform="translate(510,435)">
+  <rect width="28" height="20" rx="1" fill="#1d4ed8" stroke="#1e3a8a" stroke-width="1"/>
+  <rect x="3" y="2" width="22" height="12" rx="0.5" fill="#93c5fd"/>
+  <rect x="9" y="15" width="10" height="3" fill="#3b82f6"/>
+  <text x="14" y="34" text-anchor="middle" font-size="7" fill="#1d4ed8" font-family="Courier New">ASST PC</text>
+</g>
+<g transform="translate(555,435)">
+  <rect width="35" height="25" rx="2" fill="#be185d" stroke="#9d174d" stroke-width="1"/>
+  <rect x="5" y="4" width="25" height="12" rx="1" fill="#fdf2f8"/>
+  <rect x="8" y="18" width="19" height="5" rx="1" fill="#fbcfe8"/>
+  <text x="17" y="40" text-anchor="middle" font-size="7" fill="#be185d" font-family="Courier New">PRINTER</text>
+</g>
+
+<g transform="translate(605,435)">
+  <rect width="30" height="18" rx="3" fill="#166534" stroke="#14532d" stroke-width="1"/>
+  <rect x="3" y="4" width="5" height="10" rx="1" fill="#4ade80"/>
+  <rect x="10" y="4" width="5" height="10" rx="1" fill="#4ade80"/>
+  <rect x="17" y="4" width="5" height="10" rx="1" fill="#86efac"/>
+  <rect x="24" y="4" width="4" height="10" rx="1" fill="#4ade80"/>
+  <text x="15" y="32" text-anchor="middle" font-size="6" fill="#166534" font-family="Courier New">SW 8p</text>
+</g>
+
+<g transform="translate(470,380)">
+  <rect width="16" height="12" rx="2" fill="#0369a1" stroke="#075985" stroke-width="0.8"/>
+  <circle cx="8" cy="6" r="3.5" fill="#7dd3fc"/>
+  <circle cx="8" cy="6" r="2" fill="#0c4a6e"/>
+  <text x="8" y="22" text-anchor="middle" font-size="6" fill="#0369a1" font-family="Courier New">CCTV</text>
+</g>
+
+<!-- FIRE SUPPRESSION ROOM -->
+<rect x="660" y="375" width="180" height="150" fill="#fee2e2" stroke="#ef4444" stroke-width="2.5"/>
+<text x="750" y="400" text-anchor="middle" font-size="9" font-weight="700" fill="#991b1b" font-family="Courier New">FIRE SUPPRESSION</text>
+<text x="750" y="415" text-anchor="middle" font-size="8" fill="#7f1d1d" font-family="Courier New">FM200 | Novec 1230</text>
+
+<!-- Fire Suppression Tanks -->
+<g transform="translate(680,435)">
+  <rect width="40" height="50" rx="5" fill="#dc2626" stroke="#991b1b" stroke-width="1"/>
+  <text x="20" y="55" text-anchor="middle" font-size="6" fill="#fecaca" font-family="Courier New">FM200</text>
+</g>
+<g transform="translate(735,435)">
+  <rect width="40" height="50" rx="5" fill="#dc2626" stroke="#991b1b" stroke-width="1"/>
+  <text x="20" y="55" text-anchor="middle" font-size="6" fill="#fecaca" font-family="Courier New">NOVEC</text>
+</g>
+
+<!-- Control Panel -->
+<g transform="translate(790,435)">
+  <rect width="35" height="40" rx="3" fill="#475569" stroke="#334155" stroke-width="1"/>
+  <rect x="5" y="5" width="25" height="15" rx="1" fill="#fbbf24"/>
+  <text x="17" y="58" text-anchor="middle" font-size="6" fill="#cbd5e1" font-family="Courier New">CTRL</text>
+</g>
+
+<g transform="translate(670,380)">
+  <rect width="16" height="12" rx="2" fill="#0369a1" stroke="#075985" stroke-width="0.8"/>
+  <circle cx="8" cy="6" r="3.5" fill="#7dd3fc"/>
+  <circle cx="8" cy="6" r="2" fill="#0c4a6e"/>
+  <text x="8" y="22" text-anchor="middle" font-size="6" fill="#0369a1" font-family="Courier New">CCTV</text>
+</g>
+
+<!-- IDF DISTRIBUTION CLOSET -->
+<rect x="845" y="375" width="110" height="70" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+<text x="900" y="395" text-anchor="middle" font-size="9" font-weight="700" fill="#713f12" font-family="Courier New">IDF CLOSET</text>
+<text x="900" y="408" text-anchor="middle" font-size="7" fill="#854d0e" font-family="Courier New">Distribution</text>
+<g transform="translate(855,418)">
+  <rect width="30" height="18" rx="3" fill="#166534" stroke="#14532d" stroke-width="1"/>
+  <rect x="3" y="4" width="5" height="10" rx="1" fill="#4ade80"/>
+  <rect x="10" y="4" width="5" height="10" rx="1" fill="#4ade80"/>
+  <rect x="17" y="4" width="5" height="10" rx="1" fill="#86efac"/>
+  <rect x="24" y="4" width="4" height="10" rx="1" fill="#4ade80"/>
+  <text x="15" y="32" text-anchor="middle" font-size="6" fill="#166534" font-family="Courier New">L2 SW</text>
+</g>
+<g transform="translate(895,418)">
+  <rect width="30" height="18" rx="2" fill="#374151" stroke="#1f2937" stroke-width="1"/>
+  <rect x="3" y="3" width="24" height="12" rx="1" fill="#6b7280"/>
+  <text x="15" y="32" text-anchor="middle" font-size="6" fill="#374151" font-family="Courier New">PATCH</text>
+</g>
+
+<!-- TOILETS -->
+<rect x="960" y="375" width="70" height="70" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5"/>
+<text x="995" y="408" text-anchor="middle" font-size="9" fill="#64748b" font-family="Courier New" font-weight="700">WC</text>
+
+<!-- FIRE EXIT -->
+<rect x="1035" y="375" width="110" height="70" fill="#fee2e2" stroke="#ef4444" stroke-width="1.5"/>
+<text x="1090" y="408" text-anchor="middle" font-size="9" fill="#991b1b" font-family="Courier New" font-weight="700">FIRE EXIT</text>
+<text x="1090" y="422" text-anchor="middle" font-size="8" fill="#991b1b" font-family="Courier New" font-weight="700">EMERGENCY</text>
+
+<!-- SERVER ROOM ANNEX / EXPANSION -->
+<rect x="1150" y="375" width="140" height="150" fill="#1e3a5f" stroke="#1e40af" stroke-width="2.5"/>
+<text x="1220" y="400" text-anchor="middle" font-size="9" font-weight="700" fill="#ffffff" font-family="Courier New">SERVER ANNEX</text>
+<text x="1220" y="415" text-anchor="middle" font-size="8" fill="#93c5fd" font-family="Courier New">Future Expansion</text>
+<g transform="translate(1165,435)">
+  <rect width="40" height="50" rx="3" fill="#374151" stroke="#1f2937" stroke-width="1"/>
+  <rect x="5" y="5" width="30" height="15" rx="1" fill="#6b7280"/>
+  <rect x="5" y="25" width="30" height="15" rx="1" fill="#6b7280"/>
+  <text x="20" y="60" text-anchor="middle" font-size="5" fill="#cbd5e1" font-family="Courier New">RACK</text>
+</g>
+<g transform="translate(1220,435)">
+  <rect width="40" height="50" rx="3" fill="#374151" stroke="#1f2937" stroke-width="1"/>
+  <rect x="5" y="5" width="30" height="15" rx="1" fill="#6b7280"/>
+  <rect x="5" y="25" width="30" height="15" rx="1" fill="#6b7280"/>
+  <text x="20" y="60" text-anchor="middle" font-size="5" fill="#cbd5e1" font-family="Courier New">RACK</text>
+</g>
+
+<g transform="translate(1150,380)">
+  <rect width="16" height="12" rx="2" fill="#0369a1" stroke="#075985" stroke-width="0.8"/>
+  <circle cx="8" cy="6" r="3.5" fill="#7dd3fc"/>
+  <circle cx="8" cy="6" r="2" fill="#0c4a6e"/>
+  <text x="8" y="22" text-anchor="middle" font-size="6" fill="#0369a1" font-family="Courier New">CCTV</text>
+</g>
+
+<!-- CORRIDOR WAP -->
+<g transform="translate(1260,440)">
+  <circle cx="10" cy="10" r="10" fill="#7c3aed" stroke="#5b21b6" stroke-width="1"/>
+  <path d="M5 10 Q10 4 15 10" fill="none" stroke="#fff" stroke-width="1.2"/>
+  <text x="10" y="28" text-anchor="middle" font-size="6" fill="#7c3aed" font-family="Courier New">WAP</text>
+</g>
+
+<!-- STAIRWELL -->
+<rect x="15" y="530" width="90" height="140" fill="#e5e7eb" stroke="#555" stroke-width="1.5" stroke-dasharray="4,2"/>
+<text x="60" y="595" text-anchor="middle" font-size="9" fill="#555" font-family="Courier New" font-weight="700">STAIR</text>
+<text x="60" y="610" text-anchor="middle" font-size="9" fill="#555" font-family="Courier New" font-weight="700">WELL</text>
+<line x1="15" y1="550" x2="105" y2="550" stroke="#999" stroke-width="0.8"/>
+<line x1="15" y1="570" x2="105" y2="570" stroke="#999" stroke-width="0.8"/>
+<line x1="15" y1="590" x2="105" y2="590" stroke="#999" stroke-width="0.8"/>
+<line x1="15" y1="610" x2="105" y2="610" stroke="#999" stroke-width="0.8"/>
+<line x1="15" y1="630" x2="105" y2="630" stroke="#999" stroke-width="0.8"/>
+<line x1="15" y1="650" x2="105" y2="650" stroke="#999" stroke-width="0.8"/>
+
+<text x="1290" y="670" text-anchor="end" font-size="9" fill="#999" font-family="Courier New">XYZ Engineering College | Server Room Block | GROUND FLOOR | VLAN 100 | Data Center</text>
+
+</svg>
+
+<!-- LEGEND -->
+<div class="legend">
+  <div class="legend-title">🖥️ Device Icon Legend — Server Room Block (Data Center)</div>
+  <div class="legend-item"><svg class="legend-icon" viewBox="0 0 20 20"><rect width="18" height="13" x="1" y="1" rx="1" fill="#1d4ed8" stroke="#1e3a8a" stroke-width="0.8"/><rect x="3" y="3" width="14" height="8" rx="0.5" fill="#93c5fd"/><rect x="6" y="12" width="8" height="2" fill="#3b82f6"/></svg><span>PC — Staff Workstation (NOC/IT Manager)</span></div>
+  <div class="legend-item"><svg class="legend-icon" viewBox="0 0 20 20"><rect width="18" height="15" x="1" y="2" rx="3" fill="#475569" stroke="#334155" stroke-width="1"/><rect x="3" y="4" width="14" height="5" rx="1" fill="#6b7280"/><rect x="3" y="11" width="14" height="5" rx="1" fill="#6b7280"/></svg><span>🗄️ Server Rack — Physical Server</span></div>
+  <div class="legend-item"><svg class="legend-icon" viewBox="0 0 20 20"><rect width="18" height="10" x="1" y="5" rx="3" fill="#166534" stroke="#14532d" stroke-width="1"/><rect x="4" y="8" width="3" height="5" rx="1" fill="#4ade80"/><rect x="9" y="8" width="3" height="5" rx="1" fill="#4ade80"/><rect x="14" y="8" width="3" height="5" rx="1" fill="#86efac"/></svg><span>SW — Network Switch (Core/Distribution)</span></div>
+  <div class="legend-item"><svg class="legend-icon" viewBox="0 0 20 20"><rect width="16" height="12" x="2" y="4" rx="3" fill="#854d0e" stroke="#713f12" stroke-width="1"/><rect x="4" y="6" width="5" height="8" rx="1" fill="#fef3c7"/><circle cx="15" cy="10" r="3" fill="#fbbf24"/></svg><span>FW — Firewall Cluster</span></div>
+  <div class="legend-item"><svg class="legend-icon" viewBox="0 0 20 20"><circle cx="10" cy="9" r="9" fill="#7c3aed" stroke="#5b21b6" stroke-width="1"/><path d="M5 9 Q10 3 15 9" fill="none" stroke="#fff" stroke-width="1.5"/></svg><span>WAP — Wireless Access Point</span></div>
+  <div class="legend-item"><svg class="legend-icon" viewBox="0 0 20 20"><rect width="14" height="10" x="3" y="5" rx="2" fill="#0369a1" stroke="#075985" stroke-width="0.8"/><circle cx="10" cy="10" r="3" fill="#7dd3fc"/><circle cx="10" cy="10" r="1.5" fill="#0c4a6e"/></svg><span>CCTV — IP Surveillance Camera</span></div>
+  <div class="legend-item"><svg class="legend-icon" viewBox="0 0 20 20"><rect width="16" height="12" x="2" y="4" rx="2" fill="#be185d" stroke="#9d174d" stroke-width="1"/><rect x="5" y="7" width="10" height="5" rx="1" fill="#fdf2f8"/><rect x="7" y="14" width="6" height="2" rx="1" fill="#fbcfe8"/></svg><span>PRT — Printer</span></div>
+  <div class="legend-item"><svg class="legend-icon" viewBox="0 0 20 20"><rect width="16" height="15" x="2" y="2" rx="3" fill="#475569" stroke="#334155" stroke-width="1"/><rect x="4" y="4" width="12" height="4" rx="1" fill="#6b7280"/><rect x="4" y="10" width="12" height="4" rx="1" fill="#6b7280"/></svg><span>⚡ UPS / Power Backup</span></div>
+</div>
+
+</div>
+
+<script>
+// Simple scroll function (since only one floor, just for consistency)
+function scrollToFloor(floor) {
+  const element = document.getElementById(floor + '-floor');
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+</script>
+
+<script src="network_standards.js"></script>
+</body>
+</html>

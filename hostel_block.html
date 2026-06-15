@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>XYZ Engineering College - Hostel Block Complete Network Floor Plan</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:#e0e0e0;font-family:'Courier New',monospace;}
+.page{width:1300px;margin:0 auto;padding:20px;}
+.header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:8px;border-bottom:3px solid #222;padding:15px 20px;background:#fff;border-radius:8px;}
+.title-main{font-size:20px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#b91c1c;}
+.title-sub{font-size:11px;color:#555;letter-spacing:1px;margin-top:5px;}
+.meta{font-size:9px;color:#666;text-align:right;line-height:1.6;}
+.floor-label-bar{background:#b91c1c;color:#fff;font-size:11px;font-weight:700;letter-spacing:3px;padding:8px 15px;text-transform:uppercase;margin-top:20px;margin-bottom:5px;border-radius:5px;}
+.floor-svg{display:block;width:100%;border:3px solid #b91c1c;border-radius:8px;background:#f9f9f6;margin-bottom:25px;box-shadow:0 4px 8px rgba(0,0,0,0.1);}
+.legend{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px;border:2px solid #999;padding:12px 15px;background:#fff;border-radius:8px;}
+.legend-title{width:100%;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;border-bottom:2px solid #ddd;padding-bottom:6px;margin-bottom:8px;color:#b91c1c;}
+.legend-item{display:flex;align-items:center;gap:8px;font-size:9px;color:#333;}
+.legend-icon{width:24px;height:24px;flex-shrink:0;}
+.nav-buttons{display:flex;justify-content:center;gap:15px;margin:20px 0;flex-wrap:wrap;}
+.nav-btn{background:#b91c1c;color:#fff;border:none;padding:10px 20px;font-family:'Courier New',monospace;font-weight:700;cursor:pointer;border-radius:5px;font-size:12px;}
+.nav-btn:hover{background:#991b1b;}
+.floor-status{text-align:center;margin:10px 0;font-size:11px;color:#555;}
+</style>
+</head>
+<body>
+<div class="page">
+
+<div class="header">
+  <div>
+    <div class="title-main">🏠 XYZ Engineering College — Hostel Block</div>
+    <div class="title-sub">Complete Physical Network Floor Plan | All Floors (G + F1 + F2 + F3) | VLAN 80</div>
+  </div>
+  <div class="meta">
+    Course: Network Administration &amp; Management<br>
+    Program: BEng23CoE | Block 4 of 9<br>
+    📍 4 Floors | 👥 ~600 Students | 🖧 VLAN 80<br>
+    📅 Week 1 — Physical Design | HOSTEL (WiFi-Only)
+  </div>
+</div>
+
+<div class="nav-buttons">
+  <button class="nav-btn" onclick="scrollToFloor('ground')">🏠 GROUND FLOOR</button>
+  <button class="nav-btn" onclick="scrollToFloor('first')">📄 FIRST FLOOR</button>
+  <button class="nav-btn" onclick="scrollToFloor('second')">📚 SECOND FLOOR</button>
+  <button class="nav-btn" onclick="scrollToFloor('third')">🏢 THIRD FLOOR</button>
+</div>
+
+<div class="floor-status" id="floor-status">
+  📌 Hostel Block — Floors: Ground | First | Second | Third (Scroll down to view all)
+</div>
+
+<!-- ============================================================ -->
+<!-- GROUND FLOOR - Hostel Block -->
+<!-- ============================================================ -->
+
+<div id="ground-floor">
+<div class="floor-label-bar">🏠 GROUND FLOOR — Hostel | Reception + Warden Office + Common Room + Dining</div>
+
+<svg class="floor-svg" viewBox="0 0 1300 680" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <pattern id="wall" width="4" height="4" patternUnits="userSpaceOnUse">
+    <rect width="4" height="4" fill="#555"/>
+    <rect width="2" height="2" fill="#888"/>
+  </pattern>
+</defs>
+
+<rect width="1300" height="680" fill="#f9f9f6"/>
+<rect x="10" y="10" width="1280" height="660" fill="none" stroke="#222" stroke-width="7" rx="2"/>
+
+<!-- MAIN CORRIDOR -->
+<line x1="10" y1="360" x2="1290" y2="360" stroke="#555" stroke-width="3" stroke-dasharray="8,4"/>
+<text x="650" y="378" text-anchor="middle" font-size="10" fill="#777" font-family="Courier New" letter-spacing="3">━━━━━━━━━━ MAIN CORRIDOR ━━━━━━━━━━</text>
+
+<!-- ROOM 1: RECEPTION / LOBBY -->
+<rect x="15" y="15" width="280" height="170" fill="#e0e7ff" stroke="#3730a3" stroke-width="2.5"/>
+<line x1="125" y1="185" x2="165" y2="185" stroke="#f9f9f6" stroke-width="5"/>
+<path d="M125 185 Q145 165 165 185" fill="none" stroke="#555" stroke-width="1.5"/>
+<text x="155" y="35" text-anchor="middle" font-size="11" font-weight="700" fill="#312e81" font-family="Courier New">RECEPTION / LOBBY</text>
+<text x="155" y="50" text-anchor="middle" font-size="9" fill="#4338ca" font-family="Courier New">Student Check-in | Security | VLAN 80</text>
+
+<!-- Reception Desk -->
+<g transform="translate(30,70)">
+  <rect width="140" height="40" rx="3" fill="#a8a29e" stroke="#78716c" stroke-width="1.5"/>
+  <text x="70" y="95" text-anchor="middle" font-size="9" font-weight="700" fill="#44403c" font-family="Courier New">RECEPTION DESK</text>
+</g>
+
+<!-- Reception PCs -->
+<g transform="translate(30,125)">
+  <rect width="22" height="18" rx="1" fill="#1d4ed8" stroke="#1e3a8a" stroke-width="1"/>
+  <rect x="3" y="2" width="16" height="11" rx="0.5" fill="#93c5fd"/>
+  <rect x="8" y="14" width="6" height="3" fill="#3b82f6"/>
+  <text x="11" y="32" text-anchor="middle" font-size="6" fill="#1d4ed8" font-family="Courier New">PC</text>
+</g>
+<g transform="translate(65,125)">
+  <rect width="22" height="18" rx="1" fill="#1d4ed8" stroke="#1e3a8a" stroke-width="1"/>
+  <rect x="3" y="2" width="16" height="11" rx="0.5" fill="#93c5fd"/>
+  <rect x="8" y="14" width="6" height="3" fill="#3b82f6"/>
+  <text x="11" y="32" text-anchor="middle" font-size="6" fill="#1d4ed8" font-family="Courier New">PC</text>
+</g>
+
+<!-- Visitor Seating -->
+<rect x="180" y="70" width="90" height="60" rx="5" fill="#c084fc" stroke="#9333ea" stroke-width="1"/>
+<text x="225" y="95" text-anchor="middle" font-size="8" fill="#4c1d95" font-family="Courier New">VISITOR</text>
+<text x="225" y="110" text-anchor="middle" font-size="8" fill="#4c1d95" font-family="Courier New">SEATING</text>
+
+<g transform="translate(25,25)">
+  <rect width="16" height="12" rx="2" fill="#0369a1" stroke="#075985" stroke-width="0.8"/>
+  <circle cx="8" cy="6" r="3.5" fill="#7dd3fc"/>
+  <circle cx="8" cy="6" r="2" fill="#0c4a6e"/>
+  <text x="8" y="22" text-anchor="middle" font-size="6" fill="#0369a1" font-family="Courier New">CCTV</text>
+</g>
+
+<g transform="translate(240,125)">
+  <circle cx="12" cy="12" r="12" fill="#7c3aed" stroke="#5b21b6" stroke-width="1"/>
+  <path d="M6 12 Q12 5 18 12" fill="none" stroke="#fff" stroke-width="1.5"/>
+  <text x="12" y="32" text-anchor="middle" font-size="7" fill="#7c3aed" font-family="Courier New">WAP</text>
+</g>
+
+<!-- ROOM 2: WARDEN'S OFFICE -->
+<rect x="300" y="15" width="250" height="170" fill="#fef3c7" stroke="#b45309" stroke-width="2.5"/>
+<text x="425" y="35" text-anchor="middle" font-size="10" font-weight="700" fill="#713f12" font-family="Courier New">WARDEN'S OFFICE</text>
+<text x="425" y="50" text-anchor="middle" font-size="9" fill="#92400e" font-family="Courier New">Hostel Administration | VLAN 80</text>
+
+<g transform="translate(315,70)">
+  <rect width="28" height="20" rx="1" fill="#0f766e" stroke="#0d5e57" stroke-width="1"/>
+  <rect x="3" y="2" width="22" height="12" rx="0.5" fill="#5eead4"/>
+  <rect x="9" y="15" width="10" height="3" fill="#14b8a6"/>
+  <text x="14" y="34" text-anchor="middle" font-size="7" fill="#0f766e" font-family="Courier New">WARDEN</text>
+</g>
+<g transform="translate(355,70)">
+  <rect width="28" height="20" rx="1" fill="#1d4ed8" stroke="#1e3a8a" stroke-width="1"/>
+  <rect x="3" y="2" width="22" height="12" rx="0.5" fill="#93c5fd"/>
+  <rect x="9" y="15" width="10" height="3" fill="#3b82f6"/>
+  <text x="14" y="34" text-anchor="middle" font-size="7" fill="#1d4ed8" font-family="Courier New">ASST</text>
+</g>
+<g transform="translate(400,70)">
+  <rect width="35" height="25" rx="2" fill="#be185d" stroke="#9d174d" stroke-width="1"/>
+  <rect x="5" y="4" width="25" height="12" rx="1" fill="#fdf2f8"/>
+  <rect x="8" y="18" width="19" height="5" rx="1" fill="#fbcfe8"/>
+  <text x="17" y="40" text-anchor="middle" font-size="7" fill="#be185d" font-family="Courier New">PRINTER</text>
+</g>
+
+<!-- Filing Cabinet -->
+<g transform="translate(450,70)">
+  <rect width="30" height="40" rx="2" fill="#d4a373" stroke="#a67c52" stroke-width="1"/>
+  <line x1="450" y1="80" x2="480" y2="80" stroke="#a67c52" stroke-width="0.8"/>
+  <line x1="450" y1="90" x2="480" y2="90" stroke="#a67c52" stroke-width="0.8"/>
+  <text x="465" y="118" text-anchor="middle" font-size="6" fill="#92400e" font-family="Courier New">FILES</text>
+</g>
+
+<g transform="translate(490,70)">
+  <rect width="35" height="18" rx="3" fill="#166534" stroke="#14532d" stroke-width="1"/>
+  <rect x="3" y="4" width="5" height="10" rx="1" fill="#4ade80"/>
+  <rect x="10" y="4" width="5" height="10" rx="1" fill="#4ade80"/>
+  <rect x="17" y="4" width="5" height="10" rx="1" fill="#86efac"/>
+  <rect x="24" y="4" width="5" height="10" rx="1" fill="#4ade80"/>
+  <text x="17" y="32" text-anchor="middle" font-size="6" fill="#166534" font-family="Courier New">SW 8p</text>
+</g>
+
+<g transform="translate(300,25)">
+  <rect width="16" height="12" rx="2" fill="#0369a1" stroke="#075985" stroke-width="0.8"/>
+  <circle cx="8" cy="6" r="3.5" fill="#7dd3fc"/>
+  <circle cx="8" cy="6" r="2" fill="#0c4a6e"/>
+  <text x="8" y="22" text-anchor="middle" font-size="6" fill="#0369a1" font-family="Courier New">CCTV</text>
+</g>
+
+<!-- ROOM 3: COMMON ROOM / TV LOUNGE -->
+<rect x="555" y="15" width="320" height="170" fill="#fae8ff" stroke="#a21caf" stroke-width="2.5"/>
+<text x="715" y="35" text-anchor="middle" font-size="10" font-weight="700" fill="#701a75" font-family="Courier New">COMMON ROOM / TV LOUNGE</text>
+<text x="715" y="50" text-anchor="middle" font-size="9" fill="#86198f" font-family="Courier New">Student Relaxation | TV | VLAN 80</text>
+
+<!-- Sofas -->
+<rect x="570" y="70" width="70" height="35" rx="5" fill="#c084fc" stroke="#9333ea" stroke-width="1"/>
+<text x="605" y="90" text-anchor="middle" font-size="7" fill="#4c1d95" font-family="Courier New">SOFA</text>
+<rect x="650" y="70" width="70" height="35" rx="5" fill="#c084fc" stroke="#9333ea" stroke-width="1"/>
+<text x="685" y="90" text-anchor="middle" font-size="7" fill="#4c1d95" font-family="Courier New">SOFA</text>
+<rect x="730" y="70" width="70" height="35" rx="5" fill="#c084fc" stroke="#9333ea" stroke-width="1"/>
+<text x="765" y="90" text-anchor="middle" font-size="7" fill="#4c1d95" font-family="Courier New">SOFA</text>
+
+<!-- TV -->
+<g transform="translate(810,70)">
+  <rect width="50" height="35" rx="3" fill="#1e3a5f" stroke="#1e40af" stroke-width="1"/>
+  <rect x="5" y="5" width="40" height="25" rx="2" fill="#1d4ed8"/>
+  <text x="25" y="22" text-anchor="middle" font-size="8" font-weight="700" fill="#ffffff" font-family="Courier New">📺 TV</text>
+</g>
+
+<!-- Coffee/Tea Station -->
+<g transform="translate(570,120)">
+  <rect width="50" height="35" rx="3" fill="#475569" stroke="#334155" stroke-width="1"/>
+  <rect x="5" y="5" width="40" height="15" rx="1" fill="#6b7280"/>
+  <text x="25" y="48" text-anchor="middle" font-size="6" fill="#cbd5e1" font-family="Courier New">COFFEE</text>
+</g>
+
+<g transform="translate(640,120)">
+  <circle cx="12" cy="12" r="12" fill="#7c3aed" stroke="#5b21b6" stroke-width="1"/>
+  <path d="M6 12 Q12 5 18 12" fill="none" stroke="#fff" stroke-width="1.5"/>
+  <text x="12" y="32" text-anchor="middle" font-size="7" fill="#7c3aed" font-family="Courier New">WAP</text>
+</g>
+
+<g transform="translate(555,25)">
+  <rect width="16" height="12" rx="2" fill="#0369a1" stroke="#075985" stroke-width="0.8"/>
+  <circle cx="8" cy="6" r="3.5" fill="#7dd3fc"/>
+  <circle cx="8" cy="6" r="2" fill="#0c4a6e"/>
+  <text x="8" y="22" text-anchor="middle" font-size="6" fill="#0369a1" font-family="Courier New">CCTV</text>
+</g>
+
+<!-- ROOM 4: DINING HALL -->
+<rect x="880" y="15" width="410" height="170" fill="#f0fdf4" stroke="#16a34a" stroke-width="2.5"/>
+<text x="1085" y="35" text-anchor="middle" font-size="11" font-weight="700" fill="#14532d" font-family="Courier New">DINING HALL</text>
+<text x="1085" y="50" text-anchor="middle" font-size="9" fill="#166534" font-family="Courier New">Capacity: 120 Students | VLAN 80</text>
+
+<!-- Dining Tables -->
+<rect x="900" y="70" width="80" height="40" rx="3" fill="#a8a29e" stroke="#78716c" stroke-width="1"/>
+<text x="940" y="95" text-anchor="middle" font-size="7" fill="#44403c" font-family="Courier New">TABLE 1</text>
+<rect x="990" y="70" width="80" height="40" rx="3" fill="#a8a29e" stroke="#78716c" stroke-width="1"/>
+<text x="1030" y="95" text-anchor="middle" font-size="7" fill="#44403c" font-family="Courier New">TABLE 2</text>
+<rect x="1080" y="70" width="80" height="40" rx="3" fill="#a8a29e" stroke="#78716c" stroke-width="1"/>
+<text x="1120" y="95" text-anchor="middle" font-size="7" fill="#44403c" font-family="Courier New">TABLE 3</text>
+<rect x="1170" y="70" width="80" height="40" rx="3" fill="#a8a29e" stroke="#78716c" stroke-width="1"/>
+<text x="1210" y="95" text-anchor="middle" font-size="7" fill="#44403c" font-family="Courier New">TABLE 4</text>
+
+<rect x="900" y="120" width="80" height="40" rx="3" fill="#a8a29e" stroke="#78716c" stroke-width="1"/>
+<text x="940" y="145" text-anchor="middle" font-size="7" fill="#44403c" font-family="Courier New">TABLE 5</text>
+<rect x="990" y="120" width="80" height="40" rx="3" fill="#a8a29e" stroke="#78716c" stroke-width="1"/>
+<text x="1030" y="145" text-anchor="middle" font-size="7" fill="#44403c" font-family="Courier New">TABLE 6</text>
+<rect x="1080" y="120" width="80" height="40" rx="3" fill="#a8a29e" stroke="#78716c" stroke-width="1"/>
+<text x="1120" y="145" text-anchor="middle" font-size="7" fill="#44403c" font-family="Courier New">TABLE 7</text>
+
+<g transform="translate(880,25)">
+  <rect width="16" height="12" rx="2" fill="#0369a1" stroke="#075985" stroke-width="0.8"/>
+  <circle cx="8" cy="6" r="3.5" fill="#7dd3fc"/>
+  <circle cx="8" cy="6" r="2" fill="#0c4a6e"/>
+  <text x="8" y="22" text-anchor="middle" font-size="6" fill="#0369a1" font-family="Courier New">CCTV</text>
+</g>
+
+<g transform="translate(1260,70)">
+  <circle cx="10" cy="10" r="10" fill="#7c3aed" stroke="#5b21b6" stroke-width="1"/>
+  <path d="M5 10 Q10 4 15 10" fill="none" stroke="#fff" stroke-width="1.2"/>
+  <text x="10" y="28" text-anchor="middle" font-size="6" fill="#7c3aed" font-family="Courier New">WAP</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- BOTTOM ROW - GROUND FLOOR (Residential Area) -->
+<!-- ============================================================ -->
+
+<!-- LAUNDRY ROOM -->
+<rect x="15" y="375" width="180" height="150" fill="#e5e7eb" stroke="#6b7280" stroke-width="2.5"/>
+<text x="105" y="400" text-anchor="middle" font-size="10" font-weight="700" fill="#374151" font-family="Courier New">LAUNDRY ROOM</text>
+<text x="105" y="415" text-anchor="middle" font-size="9" fill="#4b5563" font-family="Courier New">Washing Machines</text>
+
+<!-- Washing Machines -->
+<g transform="translate(30,435)">
+  <rect width="35" height="40" rx="3" fill="#475569" stroke="#334155" stroke-width="1"/>
+  <circle cx="17" cy="20" r="8" fill="#6b7280"/>
+  <text x="17" y="55" text-anchor="middle" font-size="6" fill="#cbd5e1" font-family="Courier New">WASH</text>
+</g>
+<g transform="translate(75,435)">
+  <rect width="35" height="40" rx="3" fill="#475569" stroke="#334155" stroke-width="1"/>
+  <circle cx="17" cy="20" r="8" fill="#6b7280"/>
+  <text x="17" y="55" text-anchor="middle" font-size="6" fill="#cbd5e1" font-family="Courier New">WASH</text>
+</g>
+<g transform="translate(120,435)">
+  <rect width="35" height="40" rx="3" fill="#475569" stroke="#334155" stroke-width="1"/>
+  <circle cx="17" cy="20" r="8" fill="#6b7280"/>
+  <text x="17" y="55" text-anchor="middle" font-size="6" fill="#cbd5e1" font-family="Courier New">DRY</text>
+</g>
+
+<g transform="translate(15,380)">
+  <rect width="16" height="12" rx="2" fill="#0369a1" stroke="#075985" stroke-width="0.8"/>
+  <circle cx="8" cy="6" r="3.5" fill="#7dd3fc"/>
+  <circle cx="8" cy="6" r="2" fill="#0c4a6e"/>
+  <text x="8" y="22" text-anchor="middle" font-size="6" fill="#0369a1" font-family="Courier New">CCTV</text>
+</g>
+
+<!-- STUDENT ROOMS GROUND FLOOR (6 rooms) -->
+<!-- Room G01 -->
+<rect x="200" y="375" width="130" height="70" fill="#fffef0" stroke="#333" stroke-width="2"/>
+<text x="265" y="395" text-anchor="middle" font-size="9" font-weight="700" fill="#111" font-family="Courier New">ROOM G01</text>
+<text x="265" y="408" text-anchor="middle" font-size="8" fill="#555" font-family="Courier New">4 Students | WiFi</text>
+<g transform="translate(215,420)"><circle cx="8" cy="8" r="8" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.8"/><path d="M3 8 Q8 2 13 8" fill="none" stroke="#fff" stroke-width="1"/><text x="8" y="22" text-anchor="middle" font-size="5" fill="#7c3aed" font-family="Courier New">WAP</text></g>
+
+<!-- Room G02 -->
+<rect x="335" y="375" width="130" height="70" fill="#fffef0" stroke="#333" stroke-width="2"/>
+<text x="400" y="395" text-anchor="middle" font-size="9" font-weight="700" fill="#111" font-family="Courier New">ROOM G02</text>
+<text x="400" y="408" text-anchor="middle" font-size="8" fill="#555" font-family="Courier New">4 Students | WiFi</text>
+<g transform="translate(350,420)"><circle cx="8" cy="8" r="8" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.8"/><path d="M3 8 Q8 2 13 8" fill="none" stroke="#fff" stroke-width="1"/><text x="8" y="22" text-anchor="middle" font-size="5" fill="#7c3aed" font-family="Courier New">WAP</text></g>
+
+<!-- Room G03 -->
+<rect x="470" y="375" width="130" height="70" fill="#fffef0" stroke="#333" stroke-width="2"/>
+<text x="535" y="395" text-anchor="middle" font-size="9" font-weight="700" fill="#111" font-family="Courier New">ROOM G03</text>
+<text x="535" y="408" text-anchor="middle" font-size="8" fill="#555" font-family="Courier New">4 Students | WiFi</text>
+<g transform="translate(485,420)"><circle cx="8" cy="8" r="8" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.8"/><path d="M3 8 Q8 2 13 8" fill="none" stroke="#fff" stroke-width="1"/><text x="8" y="22" text-anchor="middle" font-size="5" fill="#7c3aed" font-family="Courier New">WAP</text></g>
+
+<!-- Room G04 -->
+<rect x="605" y="375" width="130" height="70" fill="#fffef0" stroke="#333" stroke-width="2"/>
+<text x="670" y="395" text-anchor="middle" font-size="9" font-weight="700" fill="#111" font-family="Courier New">ROOM G04</text>
+<text x="670" y="408" text-anchor="middle" font-size="8" fill="#555" font-family="Courier New">4 Students | WiFi</text>
+<g transform="translate(620,420)"><circle cx="8" cy="8" r="8" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.8"/><path d="M3 8 Q8 2 13 8" fill="none" stroke="#fff" stroke-width="1"/><text x="8" y="22" text-anchor="middle" font-size="5" fill="#7c3aed" font-family="Courier New">WAP</text></g>
+
+<!-- Room G05 -->
+<rect x="740" y="375" width="130" height="70" fill="#fffef0" stroke="#333" stroke-width="2"/>
+<text x="805" y="395" text-anchor="middle" font-size="9" font-weight="700" fill="#111" font-family="Courier New">ROOM G05</text>
+<text x="805" y="408" text-anchor="middle" font-size="8" fill="#555" font-family="Courier New">4 Students | WiFi</text>
+<g transform="translate(755,420)"><circle cx="8" cy="8" r="8" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.8"/><path d="M3 8 Q8 2 13 8" fill="none" stroke="#fff" stroke-width="1"/><text x="8" y="22" text-anchor="middle" font-size="5" fill="#7c3aed" font-family="Courier New">WAP</text></g>
+
+<!-- Room G06 -->
+<rect x="875" y="375" width="130" height="70" fill="#fffef0" stroke="#333" stroke-width="2"/>
+<text x="940" y="395" text-anchor="middle" font-size="9" font-weight="700" fill="#111" font-family="Courier New">ROOM G06</text>
+<text x="940" y="408" text-anchor="middle" font-size="8" fill="#555" font-family="Courier New">4 Students | WiFi</text>
+<g transform="translate(890,420)"><circle cx="8" cy="8" r="8" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.8"/><path d="M3 8 Q8 2 13 8" fill="none" stroke="#fff" stroke-width="1"/><text x="8" y="22" text-anchor="middle" font-size="5" fill="#7c3aed" font-family="Courier New">WAP</text></g>
+
+<!-- Room G07 -->
+<rect x="1010" y="375" width="130" height="70" fill="#fffef0" stroke="#333" stroke-width="2"/>
+<text x="1075" y="395" text-anchor="middle" font-size="9" font-weight="700" fill="#111" font-family="Courier New">ROOM G07</text>
+<text x="1075" y="408" text-anchor="middle" font-size="8" fill="#555" font-family="Courier New">4 Students | WiFi</text>
+<g transform="translate(1025,420)"><circle cx="8" cy="8" r="8" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.8"/><path d="M3 8 Q8 2 13 8" fill="none" stroke="#fff" stroke-width="1"/><text x="8" y="22" text-anchor="middle" font-size="5" fill="#7c3aed" font-family="Courier New">WAP</text></g>
+
+<!-- Room G08 -->
+<rect x="1145" y="375" width="130" height="70" fill="#fffef0" stroke="#333" stroke-width="2"/>
+<text x="1210" y="395" text-anchor="middle" font-size="9" font-weight="700" fill="#111" font-family="Courier New">ROOM G08</text>
+<text x="1210" y="408" text-anchor="middle" font-size="8" fill="#555" font-family="Courier New">4 Students | WiFi</text>
+<g transform="translate(1160,420)"><circle cx="8" cy="8" r="8" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.8"/><path d="M3 8 Q8 2 13 8" fill="none" stroke="#fff" stroke-width="1"/><text x="8" y="22" text-anchor="middle" font-size="5" fill="#7c3aed" font-family="Courier New">WAP</text></g>
+
+<!-- TOILETS / SHOWERS -->
+<rect x="200" y="450" width="180" height="50" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5"/>
+<text x="290" y="480" text-anchor="middle" font-size="9" fill="#64748b" font-family="Courier New" font-weight="700">TOILETS / SHOWERS</text>
+
+<!-- STORAGE -->
+<rect x="385" y="450" width="130" height="50" fill="#e5e7eb" stroke="#6b7280" stroke-width="1.5"/>
+<text x="450" y="480" text-anchor="middle" font-size="9" fill="#374151" font-family="Courier New" font-weight="700">STORAGE</text>
+
+<!-- IDF CLOSET -->
+<rect x="520" y="450" width="110" height="50" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+<text x="575" y="470" text-anchor="middle" font-size="9" font-weight="700" fill="#713f12" font-family="Courier New">IDF CLOSET</text>
+<text x="575" y="482" text-anchor="middle" font-size="7" fill="#854d0e" font-family="Courier New">Ground</text>
+<g transform="translate(535,470)"><rect width="22" height="14" rx="2" fill="#166534" stroke="#14532d" stroke-width="1"/><rect x="2" y="3" width="4" height="8" rx="1" fill="#4ade80"/><rect x="8" y="3" width="4" height="8" rx="1" fill="#4ade80"/><rect x="14" y="3" width="4" height="8" rx="1" fill="#86efac"/><text x="11" y="26" text-anchor="middle" font-size="5" fill="#166534" font-family="Courier New">L2</text></g>
+
+<!-- FIRE EXIT -->
+<rect x="635" y="450" width="110" height="50" fill="#fee2e2" stroke="#ef4444" stroke-width="1.5"/>
+<text x="690" y="475" text-anchor="middle" font-size="9" fill="#991b1b" font-family="Courier New" font-weight="700">FIRE EXIT</text>
+
+<!-- STAIRWELL -->
+<rect x="15" y="530" width="90" height="140" fill="#e5e7eb" stroke="#555" stroke-width="1.5" stroke-dasharray="4,2"/>
+<text x="60" y="595" text-anchor="middle" font-size="9" fill="#555" font-family="Courier New" font-weight="700">STAIR</text>
+<text x="60" y="610" text-anchor="middle" font-size="9" fill="#555" font-family="Courier New" font-weight="700">WELL</text>
+<line x1="15" y1="550" x2="105" y2="550" stroke="#999" stroke-width="0.8"/>
+<line x1="15" y1="570" x2="105" y2="570" stroke="#999" stroke-width="0.8"/>
+<line x1="15" y1="590" x2="105" y2="590" stroke="#999" stroke-width="0.8"/>
+<line x1="15" y1="610" x2="105" y2="610" stroke="#999" stroke-width="0.8"/>
+<line x1="15" y1="630" x2="105" y2="630" stroke="#999" stroke-width="0.8"/>
+<line x1="15" y1="650" x2="105" y2="650" stroke="#999" stroke-width="0.8"/>
+
+<text x="1290" y="670" text-anchor="end" font-size="9" fill="#999" font-family="Courier New">XYZ Engineering College | Hostel Block | GROUND FLOOR | VLAN 80 | ~600 Students</text>
+
+</svg>
+</div>
+
+<!-- ============================================================ -->
+<!-- FIRST FLOOR - Hostel Block -->
+<!-- ============================================================ -->
+
+<div id="first-floor">
+<div class="floor-label-bar">📄 FIRST FLOOR — Hostel | Student Rooms + Study Area + Pantry</div>
+
+<svg class="floor-svg" viewBox="0 0 1300 680" xmlns="http://www.w3.org/2000/svg">
+<rect width="1300" height="680" fill="#f9f9f6"/>
+<rect x="10" y="10" width="1280" height="660" fill="none" stroke="#222" stroke-width="7" rx="2"/>
+
+<line x1="10" y1="360" x2="1290" y2="360" stroke="#555" stroke-width="3" stroke-dasharray="8,4"/>
+<text x="650" y="378" text-anchor="middle" font-size="10" fill="#777" font-family="Courier New" letter-spacing="3">━━━━━━━━━━ MAIN CORRIDOR ━━━━━━━━━━</text>
+
+<!-- STUDY AREA -->
+<rect x="15" y="15" width="320" height="170" fill="#f0fdf4" stroke="#16a34a" stroke-width="2.5"/>
+<line x1="145" y1="185" x2="185" y2="185" stroke="#f9f9f6" stroke-width="5"/>
+<path d="M145 185 Q165 165 185 185" fill="none" stroke="#555" stroke-width="1.5"/>
+<text x="175" y="35" text-anchor="middle" font-size="10" font-weight="700" fill="#14532d" font-family="Courier New">STUDY AREA</text>
+<text x="175" y="50" text-anchor="middle" font-size="9" fill="#166534" font-family="Courier New">24-hour Study | 20 seats | VLAN 80</text>
+
+<!-- Study Tables -->
+<rect x="30" y="70" width="60" height="40" rx="3" fill="#a8a29e" stroke="#78716c" stroke-width="1"/>
+<text x="60" y="95" text-anchor="middle" font-size="6" fill="#44403c" font-family="Courier New">TABLE</text>
+<rect x="100" y="70" width="60" height="40" rx="3" fill="#a8a29e" stroke="#78716c" stroke-width="1"/>
+<text x="130" y="95" text-anchor="middle" font-size="6" fill="#44403c" font-family="Courier New">TABLE</text>
+<rect x="170" y="70" width="60" height="40" rx="3" fill="#a8a29e" stroke="#78716c" stroke-width="1"/>
+<text x="200" y="95" text-anchor="middle" font-size="6" fill="#44403c" font-family="Courier New">TABLE</text>
+<rect x="240" y="70" width="60" height="40" rx="3" fill="#a8a29e" stroke="#78716c" stroke-width="1"/>
+<text x="270" y="95" text-anchor="middle" font-size="6" fill="#44403c" font-family="Courier New">TABLE</text>
+
+<g transform="translate(30,125)">
+  <circle cx="12" cy="12" r="12" fill="#7c3aed" stroke="#5b21b6" stroke-width="1"/>
+  <path d="M6 12 Q12 5 18 12" fill="none" stroke="#fff" stroke-width="1.5"/>
+  <text x="12" y="32" text-anchor="middle" font-size="7" fill="#7c3aed" font-family="Courier New">WAP</text>
+</g>
+
+<g transform="translate(25,25)">
+  <rect width="16" height="12" rx="2" fill="#0369a1" stroke="#075985" stroke-width="0.8"/>
+  <circle cx="8" cy="6" r="3.5" fill="#7dd3fc"/>
+  <circle cx="8" cy="6" r="2" fill="#0c4a6e"/>
+  <text x="8" y="22" text-anchor="middle" font-size="6" fill="#0369a1" font-family="Courier New">CCTV</text>
+</g>
+
+<!-- PANTRY / KITCHENETTE -->
+<rect x="340" y="15" width="250" height="170" fill="#fefce8" stroke="#ca8a04" stroke-width="2.5"/>
+<text x="465" y="35" text-anchor="middle" font-size="10" font-weight="700" fill="#713f12" font-family="Courier New">PANTRY / KITCHENETTE</text>
+<text x="465" y="50" text-anchor="middle" font-size="9" fill="#854d0e" font-family="Courier New">Microwave | Sink | VLAN 80</text>
+
+<g transform="translate(355,70)">
+  <rect width="40" height="40" rx="3" fill="#475569" stroke="#334155" stroke-width="1"/>
+  <rect x="5" y="5" width="30" height="15" rx="1" fill="#6b7280"/>
+  <text x="20" y="55" text-anchor="middle" font-size="6" fill="#cbd5e1" font-family="Courier New">MICRO</text>
+</g>
+<g transform="translate(410,70)">
+  <rect width="40" height="40" rx="3" fill="#475569" stroke="#334155" stroke-width="1"/>
+  <rect x="5" y="5" width="30" height="15" rx="1" fill="#6b7280"/>
+  <text x="20" y="55" text-anchor="middle" font-size="6" fill="#cbd5e1" font-family="Courier New">FRIDGE</text>
+</g>
+<g transform="translate(465,70)">
+  <rect width="40" height="40" rx="3" fill="#475569" stroke="#334155" stroke-width="1"/>
+  <rect x="5" y="5" width="30" height="15" rx="1" fill="#6b7280"/>
+  <text x="20" y="55" text-anchor="middle" font-size="6" fill="#cbd5e1" font-family="Courier New">SINK</text>
+</g>
+
+<g transform="translate(520,70)">
+  <circle cx="12" cy="12" r="12" fill="#7c3aed" stroke="#5b21b6" stroke-width="1"/>
+  <path d="M6 12 Q12 5 18 12" fill="none" stroke="#fff" stroke-width="1.5"/>
+  <text x="12" y="32" text-anchor="middle" font-size="7" fill="#7c3aed" font-family="Courier New">WAP</text>
+</g>
+
+<g transform="translate(340,25)">
+  <rect width="16" height="12" rx="2" fill="#0369a1" stroke="#075985" stroke-width="0.8"/>
+  <circle cx="8" cy="6" r="3.5" fill="#7dd3fc"/>
+  <circle cx="8" cy="6" r="2" fill="#0c4a6e"/>
+  <text x="8" y="22" text-anchor="middle" font-size="6" fill="#0369a1" font-family="Courier New">CCTV</text>
+</g>
+
+<!-- RECREATION ROOM -->
+<rect x="595" y="15" width="320" height="170" fill="#fae8ff" stroke="#a21caf" stroke-width="2.5"/>
+<text x="755" y="35" text-anchor="middle" font-size="10" font-weight="700" fill="#701a75" font-family="Courier New">RECREATION ROOM</text>
+<text x="755" y="50" text-anchor="middle" font-size="9" fill="#86198f" font-family="Courier New">Indoor Games | Table Tennis | VLAN 80</text>
+
+<!-- Table Tennis -->
+<g transform="translate(610,70)">
+  <rect width="80" height="50" rx="2" fill="#a8a29e" stroke="#78716c" stroke-width="1"/>
+  <text x="650" y="100" text-anchor="middle" font-size="7" fill="#44403c" font-family="Courier New">TABLE</text>
+  <text x="650" y="112" text-anchor="middle" font-size="7" fill="#44403c" font-family="Courier New">TENNIS</text>
+</g>
+
+<!-- Carrom Board -->
+<g transform="translate(710,70)">
+  <rect width="60" height="50" rx="2" fill="#a8a29e" stroke="#78716c" stroke-width="1"/>
+  <text x="740" y="100" text-anchor="middle" font-size="7" fill="#44403c" font-family="Courier New">CARROM</text>
+</g>
+
+<g transform="translate(790,70)">
+  <circle cx="12" cy="12" r="12" fill="#7c3aed" stroke="#5b21b6" stroke-width="1"/>
+  <path d="M6 12 Q12 5 18 12" fill="none" stroke="#fff" stroke-width="1.5"/>
+  <text x="12" y="32" text-anchor="middle" font-size="7" fill="#7c3aed" font-family="Courier New">WAP</text>
+</g>
+
+<g transform="translate(595,25)">
+  <rect width="16" height="12" rx="2" fill="#0369a1" stroke="#075985" stroke-width="0.8"/>
+  <circle cx="8" cy="6" r="3.5" fill="#7dd3fc"/>
+  <circle cx="8" cy="6" r="2" fill="#0c4a6e"/>
+  <text x="8" y="22" text-anchor="middle" font-size="6" fill="#0369a1" font-family="Courier New">CCTV</text>
+</g>
+
+<!-- LAUNDRY -->
+<rect x="920" y="15" width="180" height="170" fill="#e5e7eb" stroke="#6b7280" stroke-width="2.5"/>
+<text x="1010" y="35" text-anchor="middle" font-size="10" font-weight="700" fill="#374151" font-family="Courier New">LAUNDRY</text>
+<text x="1010" y="50" text-anchor="middle" font-size="9" fill="#4b5563" font-family="Courier New">(Self-Service)</text>
+
+<g transform="translate(935,70)">
+  <rect width="40" height="50" rx="3" fill="#475569" stroke="#334155" stroke-width="1"/>
+  <circle cx="20" cy="25" r="10" fill="#6b7280"/>
+  <text x="20" y="65" text-anchor="middle" font-size="6" fill="#cbd5e1" font-family="Courier New">WASH</text>
+</g>
+<g transform="translate(990,70)">
+  <rect width="40" height="50" rx="3" fill="#475569" stroke="#334155" stroke-width="1"/>
+  <circle cx="20" cy="25" r="10" fill="#6b7280"/>
+  <text x="20" y="65" text-anchor="middle" font-size="6" fill="#cbd5e1" font-family="Courier New">WASH</text>
+</g>
+<g transform="translate(1045,70)">
+  <rect width="40" height="50" rx="3" fill="#475569" stroke="#334155" stroke-width="1"/>
+  <circle cx="20" cy="25" r="10" fill="#6b7280"/>
+  <text x="20" y="65" text-anchor="middle" font-size="6" fill="#cbd5e1" font-family="Courier New">DRY</text>
+</g>
+
+<g transform="translate(1100,25)">
+  <rect width="16" height="12" rx="2" fill="#0369a1" stroke="#075985" stroke-width="0.8"/>
+  <circle cx="8" cy="6" r="3.5" fill="#7dd3fc"/>
+  <circle cx="8" cy="6" r="2" fill="#0c4a6e"/>
+  <text x="8" y="22" text-anchor="middle" font-size="6" fill="#0369a1" font-family="Courier New">CCTV</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- BOTTOM ROW - FIRST FLOOR (Student Rooms F01-F14) -->
+<!-- ============================================================ -->
+
+<!-- Row 1: Rooms F01-F07 -->
+<g transform="translate(15,380)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="72" y="398" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM F01</text><text x="72" y="410" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(35,418)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+<g transform="translate(135,380)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="192" y="398" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM F02</text><text x="192" y="410" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(155,418)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+<g transform="translate(255,380)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="312" y="398" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM F03</text><text x="312" y="410" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(275,418)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+<g transform="translate(375,380)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="432" y="398" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM F04</text><text x="432" y="410" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(395,418)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+<g transform="translate(495,380)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="552" y="398" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM F05</text><text x="552" y="410" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(515,418)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+<g transform="translate(615,380)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="672" y="398" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM F06</text><text x="672" y="410" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(635,418)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+<g transform="translate(735,380)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="792" y="398" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM F07</text><text x="792" y="410" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(755,418)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+
+<!-- Row 2: Rooms F08-F14 -->
+<g transform="translate(15,455)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="72" y="473" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM F08</text><text x="72" y="485" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(35,493)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+<g transform="translate(135,455)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="192" y="473" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM F09</text><text x="192" y="485" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(155,493)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+<g transform="translate(255,455)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="312" y="473" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM F10</text><text x="312" y="485" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(275,493)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+<g transform="translate(375,455)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="432" y="473" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM F11</text><text x="432" y="485" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(395,493)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+<g transform="translate(495,455)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="552" y="473" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM F12</text><text x="552" y="485" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(515,493)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+<g transform="translate(615,455)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="672" y="473" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM F13</text><text x="672" y="485" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(635,493)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+<g transform="translate(735,455)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="792" y="473" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM F14</text><text x="792" y="485" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(755,493)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+
+<!-- TOILETS / SHOWERS -->
+<rect x="855" y="380" width="150" height="70" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5"/>
+<text x="930" y="415" text-anchor="middle" font-size="9" fill="#64748b" font-family="Courier New" font-weight="700">TOILETS /</text>
+<text x="930" y="430" text-anchor="middle" font-size="9" fill="#64748b" font-family="Courier New" font-weight="700">SHOWERS</text>
+
+<!-- IDF CLOSET -->
+<rect x="1010" y="380" width="110" height="70" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+<text x="1065" y="400" text-anchor="middle" font-size="9" font-weight="700" fill="#713f12" font-family="Courier New">IDF CLOSET</text>
+<text x="1065" y="413" text-anchor="middle" font-size="7" fill="#854d0e" font-family="Courier New">First Floor</text>
+<g transform="translate(1025,420)"><rect width="25" height="16" rx="2" fill="#166534" stroke="#14532d" stroke-width="1"/><rect x="2" y="3" width="4" height="10" rx="1" fill="#4ade80"/><rect x="8" y="3" width="4" height="10" rx="1" fill="#4ade80"/><rect x="14" y="3" width="4" height="10" rx="1" fill="#86efac"/><rect x="20" y="3" width="3" height="10" rx="1" fill="#4ade80"/><text x="12" y="28" text-anchor="middle" font-size="5" fill="#166534" font-family="Courier New">L2 SW</text></g>
+
+<!-- FIRE EXIT -->
+<rect x="1125" y="380" width="110" height="70" fill="#fee2e2" stroke="#ef4444" stroke-width="1.5"/>
+<text x="1180" y="415" text-anchor="middle" font-size="9" fill="#991b1b" font-family="Courier New" font-weight="700">FIRE EXIT</text>
+<text x="1180" y="430" text-anchor="middle" font-size="8" fill="#991b1b" font-family="Courier New" font-weight="700">EMERGENCY</text>
+
+<!-- CORRIDOR WAP -->
+<g transform="translate(1260,420)">
+  <circle cx="10" cy="10" r="10" fill="#7c3aed" stroke="#5b21b6" stroke-width="1"/>
+  <path d="M5 10 Q10 4 15 10" fill="none" stroke="#fff" stroke-width="1.2"/>
+  <text x="10" y="28" text-anchor="middle" font-size="6" fill="#7c3aed" font-family="Courier New">WAP</text>
+</g>
+
+<!-- STAIRWELL -->
+<rect x="15" y="530" width="90" height="140" fill="#e5e7eb" stroke="#555" stroke-width="1.5" stroke-dasharray="4,2"/>
+<text x="60" y="595" text-anchor="middle" font-size="9" fill="#555" font-family="Courier New" font-weight="700">STAIR</text><text x="60" y="610" text-anchor="middle" font-size="9" fill="#555" font-family="Courier New" font-weight="700">WELL</text>
+<line x1="15" y1="550" x2="105" y2="550" stroke="#999" stroke-width="0.8"/>
+<line x1="15" y1="570" x2="105" y2="570" stroke="#999" stroke-width="0.8"/>
+<line x1="15" y1="590" x2="105" y2="590" stroke="#999" stroke-width="0.8"/>
+<line x1="15" y1="610" x2="105" y2="610" stroke="#999" stroke-width="0.8"/>
+<line x1="15" y1="630" x2="105" y2="630" stroke="#999" stroke-width="0.8"/>
+<line x1="15" y1="650" x2="105" y2="650" stroke="#999" stroke-width="0.8"/>
+
+<text x="1290" y="670" text-anchor="end" font-size="9" fill="#999" font-family="Courier New">XYZ Engineering College | Hostel Block | FIRST FLOOR | VLAN 80 | ~600 Students</text>
+
+</svg>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECOND FLOOR - Hostel Block -->
+<!-- ============================================================ -->
+
+<div id="second-floor">
+<div class="floor-label-bar">📚 SECOND FLOOR — Hostel | Student Rooms S01-S14</div>
+
+<svg class="floor-svg" viewBox="0 0 1300 680" xmlns="http://www.w3.org/2000/svg">
+<rect width="1300" height="680" fill="#f9f9f6"/>
+<rect x="10" y="10" width="1280" height="660" fill="none" stroke="#222" stroke-width="7" rx="2"/>
+
+<line x1="10" y1="360" x2="1290" y2="360" stroke="#555" stroke-width="3" stroke-dasharray="8,4"/>
+<text x="650" y="378" text-anchor="middle" font-size="10" fill="#777" font-family="Courier New" letter-spacing="3">━━━━━━━━━━ MAIN CORRIDOR ━━━━━━━━━━</text>
+
+<!-- Row 1: Rooms S01-S07 -->
+<g transform="translate(15,20)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="72" y="38" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM S01</text><text x="72" y="50" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(35,58)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+<g transform="translate(135,20)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="192" y="38" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM S02</text><text x="192" y="50" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(155,58)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+<g transform="translate(255,20)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="312" y="38" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM S03</text><text x="312" y="50" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(275,58)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+<g transform="translate(375,20)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="432" y="38" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM S04</text><text x="432" y="50" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(395,58)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+<g transform="translate(495,20)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="552" y="38" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM S05</text><text x="552" y="50" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(515,58)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+<g transform="translate(615,20)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="672" y="38" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM S06</text><text x="672" y="50" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(635,58)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+<g transform="translate(735,20)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="792" y="38" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM S07</text><text x="792" y="50" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(755,58)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+
+<!-- Row 2: Rooms S08-S14 -->
+<g transform="translate(15,100)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="72" y="118" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM S08</text><text x="72" y="130" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(35,138)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+<g transform="translate(135,100)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="192" y="118" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM S09</text><text x="192" y="130" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(155,138)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+<g transform="translate(255,100)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="312" y="118" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM S10</text><text x="312" y="130" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(275,138)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+<g transform="translate(375,100)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="432" y="118" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM S11</text><text x="432" y="130" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(395,138)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+<g transform="translate(495,100)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="552" y="118" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM S12</text><text x="552" y="130" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(515,138)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+<g transform="translate(615,100)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="672" y="118" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM S13</text><text x="672" y="130" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(635,138)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+<g transform="translate(735,100)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="792" y="118" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM S14</text><text x="792" y="130" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(755,138)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+
+<!-- Row 3: Rooms S15-S20 -->
+<g transform="translate(15,180)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="72" y="198" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM S15</text><text x="72" y="210" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(35,218)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+<g transform="translate(135,180)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="192" y="198" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM S16</text><text x="192" y="210" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(155,218)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+<g transform="translate(255,180)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="312" y="198" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM S17</text><text x="312" y="210" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(275,218)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+<g transform="translate(375,180)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="432" y="198" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM S18</text><text x="432" y="210" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(395,218)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+<g transform="translate(495,180)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="552" y="198" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM S19</text><text x="552" y="210" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(515,218)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+<g transform="translate(615,180)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="672" y="198" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM S20</text><text x="672" y="210" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(635,218)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+
+<!-- Row 4: Rooms S21-S27 -->
+<g transform="translate(15,260)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="72" y="278" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM S21</text><text x="72" y="290" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(35,298)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+<g transform="translate(135,260)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="192" y="278" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM S22</text><text x="192" y="290" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(155,298)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+<g transform="translate(255,260)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="312" y="278" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM S23</text><text x="312" y="290" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(275,298)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+<g transform="translate(375,260)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="432" y="278" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM S24</text><text x="432" y="290" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(395,298)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+<g transform="translate(495,260)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="552" y="278" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM S25</text><text x="552" y="290" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(515,298)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+<g transform="translate(615,260)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="672" y="278" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM S26</text><text x="672" y="290" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(635,298)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+<g transform="translate(735,260)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="792" y="278" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM S27</text><text x="792" y="290" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(755,298)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+
+<!-- TOILETS / SHOWERS -->
+<rect x="855" y="20" width="150" height="70" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5"/>
+<text x="930" y="55" text-anchor="middle" font-size="9" fill="#64748b" font-family="Courier New" font-weight="700">TOILETS /</text>
+<text x="930" y="70" text-anchor="middle" font-size="9" fill="#64748b" font-family="Courier New" font-weight="700">SHOWERS</text>
+
+<rect x="855" y="100" width="150" height="70" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5"/>
+<text x="930" y="135" text-anchor="middle" font-size="9" fill="#64748b" font-family="Courier New" font-weight="700">TOILETS /</text>
+<text x="930" y="150" text-anchor="middle" font-size="9" fill="#64748b" font-family="Courier New" font-weight="700">SHOWERS</text>
+
+<rect x="855" y="180" width="150" height="70" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5"/>
+<text x="930" y="215" text-anchor="middle" font-size="9" fill="#64748b" font-family="Courier New" font-weight="700">TOILETS /</text>
+<text x="930" y="230" text-anchor="middle" font-size="9" fill="#64748b" font-family="Courier New" font-weight="700">SHOWERS</text>
+
+<rect x="855" y="260" width="150" height="70" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5"/>
+<text x="930" y="295" text-anchor="middle" font-size="9" fill="#64748b" font-family="Courier New" font-weight="700">TOILETS /</text>
+<text x="930" y="310" text-anchor="middle" font-size="9" fill="#64748b" font-family="Courier New" font-weight="700">SHOWERS</text>
+
+<!-- IDF CLOSET -->
+<rect x="1010" y="20" width="110" height="70" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+<text x="1065" y="40" text-anchor="middle" font-size="9" font-weight="700" fill="#713f12" font-family="Courier New">IDF CLOSET</text>
+<text x="1065" y="53" text-anchor="middle" font-size="7" fill="#854d0e" font-family="Courier New">Second Floor</text>
+<g transform="translate(1025,60)"><rect width="25" height="16" rx="2" fill="#166534" stroke="#14532d" stroke-width="1"/><rect x="2" y="3" width="4" height="10" rx="1" fill="#4ade80"/><rect x="8" y="3" width="4" height="10" rx="1" fill="#4ade80"/><rect x="14" y="3" width="4" height="10" rx="1" fill="#86efac"/><rect x="20" y="3" width="3" height="10" rx="1" fill="#4ade80"/><text x="12" y="28" text-anchor="middle" font-size="5" fill="#166534" font-family="Courier New">L2 SW</text></g>
+
+<!-- FIRE EXIT -->
+<rect x="1125" y="20" width="110" height="70" fill="#fee2e2" stroke="#ef4444" stroke-width="1.5"/>
+<text x="1180" y="55" text-anchor="middle" font-size="9" fill="#991b1b" font-family="Courier New" font-weight="700">FIRE EXIT</text>
+<text x="1180" y="70" text-anchor="middle" font-size="8" fill="#991b1b" font-family="Courier New" font-weight="700">EMERGENCY</text>
+
+<!-- STAIRWELL -->
+<rect x="15" y="530" width="90" height="140" fill="#e5e7eb" stroke="#555" stroke-width="1.5" stroke-dasharray="4,2"/>
+<text x="60" y="595" text-anchor="middle" font-size="9" fill="#555" font-family="Courier New" font-weight="700">STAIR</text><text x="60" y="610" text-anchor="middle" font-size="9" fill="#555" font-family="Courier New" font-weight="700">WELL</text>
+<line x1="15" y1="550" x2="105" y2="550" stroke="#999" stroke-width="0.8"/>
+<line x1="15" y1="570" x2="105" y2="570" stroke="#999" stroke-width="0.8"/>
+<line x1="15" y1="590" x2="105" y2="590" stroke="#999" stroke-width="0.8"/>
+<line x1="15" y1="610" x2="105" y2="610" stroke="#999" stroke-width="0.8"/>
+<line x1="15" y1="630" x2="105" y2="630" stroke="#999" stroke-width="0.8"/>
+<line x1="15" y1="650" x2="105" y2="650" stroke="#999" stroke-width="0.8"/>
+
+<text x="1290" y="670" text-anchor="end" font-size="9" fill="#999" font-family="Courier New">XYZ Engineering College | Hostel Block | SECOND FLOOR | VLAN 80 | ~600 Students</text>
+
+</svg>
+</div>
+
+<!-- ============================================================ -->
+<!-- THIRD FLOOR - Hostel Block -->
+<!-- ============================================================ -->
+
+<div id="third-floor">
+<div class="floor-label-bar">🏢 THIRD FLOOR — Hostel | Student Rooms T01-T27</div>
+
+<svg class="floor-svg" viewBox="0 0 1300 680" xmlns="http://www.w3.org/2000/svg">
+<rect width="1300" height="680" fill="#f9f9f6"/>
+<rect x="10" y="10" width="1280" height="660" fill="none" stroke="#222" stroke-width="7" rx="2"/>
+
+<line x1="10" y1="360" x2="1290" y2="360" stroke="#555" stroke-width="3" stroke-dasharray="8,4"/>
+<text x="650" y="378" text-anchor="middle" font-size="10" fill="#777" font-family="Courier New" letter-spacing="3">━━━━━━━━━━ MAIN CORRIDOR ━━━━━━━━━━</text>
+
+<!-- Row 1: Rooms T01-T07 -->
+<g transform="translate(15,20)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="72" y="38" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM T01</text><text x="72" y="50" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(35,58)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+<g transform="translate(135,20)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="192" y="38" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM T02</text><text x="192" y="50" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(155,58)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+<g transform="translate(255,20)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="312" y="38" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM T03</text><text x="312" y="50" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(275,58)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+<g transform="translate(375,20)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="432" y="38" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM T04</text><text x="432" y="50" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(395,58)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+<g transform="translate(495,20)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="552" y="38" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM T05</text><text x="552" y="50" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(515,58)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+<g transform="translate(615,20)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="672" y="38" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM T06</text><text x="672" y="50" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(635,58)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+<g transform="translate(735,20)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="792" y="38" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM T07</text><text x="792" y="50" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(755,58)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+
+<!-- Row 2: Rooms T08-T14 -->
+<g transform="translate(15,100)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="72" y="118" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM T08</text><text x="72" y="130" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(35,138)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+<g transform="translate(135,100)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="192" y="118" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM T09</text><text x="192" y="130" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(155,138)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+<g transform="translate(255,100)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="312" y="118" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM T10</text><text x="312" y="130" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(275,138)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+<g transform="translate(375,100)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="432" y="118" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM T11</text><text x="432" y="130" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(395,138)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+<g transform="translate(495,100)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="552" y="118" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM T12</text><text x="552" y="130" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(515,138)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+<g transform="translate(615,100)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="672" y="118" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM T13</text><text x="672" y="130" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(635,138)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+<g transform="translate(735,100)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="792" y="118" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM T14</text><text x="792" y="130" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(755,138)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+
+<!-- Row 3: Rooms T15-T20 -->
+<g transform="translate(15,180)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="72" y="198" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM T15</text><text x="72" y="210" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(35,218)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+<g transform="translate(135,180)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="192" y="198" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM T16</text><text x="192" y="210" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(155,218)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+<g transform="translate(255,180)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="312" y="198" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM T17</text><text x="312" y="210" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(275,218)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+<g transform="translate(375,180)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="432" y="198" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM T18</text><text x="432" y="210" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(395,218)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+<g transform="translate(495,180)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="552" y="198" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM T19</text><text x="552" y="210" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(515,218)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+<g transform="translate(615,180)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="672" y="198" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM T20</text><text x="672" y="210" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(635,218)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+
+<!-- Row 4: Rooms T21-T27 -->
+<g transform="translate(15,260)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="72" y="278" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM T21</text><text x="72" y="290" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(35,298)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+<g transform="translate(135,260)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="192" y="278" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM T22</text><text x="192" y="290" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(155,298)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+<g transform="translate(255,260)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="312" y="278" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM T23</text><text x="312" y="290" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(275,298)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+<g transform="translate(375,260)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="432" y="278" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM T24</text><text x="432" y="290" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(395,298)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+<g transform="translate(495,260)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="552" y="278" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM T25</text><text x="552" y="290" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(515,298)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+<g transform="translate(615,260)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="672" y="278" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM T26</text><text x="672" y="290" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(635,298)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+<g transform="translate(735,260)"><rect width="115" height="65" fill="#fffef0" stroke="#333" stroke-width="1.5"/><text x="792" y="278" text-anchor="middle" font-size="8" font-weight="700" fill="#111" font-family="Courier New">ROOM T27</text><text x="792" y="290" text-anchor="middle" font-size="7" fill="#555" font-family="Courier New">4 Students</text><g transform="translate(755,298)"><circle cx="6" cy="6" r="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="0.7"/><path d="M2 6 Q6 2 10 6" fill="none" stroke="#fff" stroke-width="1"/><text x="6" y="17" text-anchor="middle" font-size="4" fill="#7c3aed" font-family="Courier New">W</text></g></g>
+
+<!-- TOILETS / SHOWERS -->
+<rect x="855" y="20" width="150" height="70" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5"/>
+<text x="930" y="55" text-anchor="middle" font-size="9" fill="#64748b" font-family="Courier New" font-weight="700">TOILETS /</text>
+<text x="930" y="70" text-anchor="middle" font-size="9" fill="#64748b" font-family="Courier New" font-weight="700">SHOWERS</text>
+
+<rect x="855" y="100" width="150" height="70" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5"/>
+<text x="930" y="135" text-anchor="middle" font-size="9" fill="#64748b" font-family="Courier New" font-weight="700">TOILETS /</text>
+<text x="930" y="150" text-anchor="middle" font-size="9" fill="#64748b" font-family="Courier New" font-weight="700">SHOWERS</text>
+
+<rect x="855" y="180" width="150" height="70" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5"/>
+<text x="930" y="215" text-anchor="middle" font-size="9" fill="#64748b" font-family="Courier New" font-weight="700">TOILETS /</text>
+<text x="930" y="230" text-anchor="middle" font-size="9" fill="#64748b" font-family="Courier New" font-weight="700">SHOWERS</text>
+
+<rect x="855" y="260" width="150" height="70" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5"/>
+<text x="930" y="295" text-anchor="middle" font-size="9" fill="#64748b" font-family="Courier New" font-weight="700">TOILETS /</text>
+<text x="930" y="310" text-anchor="middle" font-size="9" fill="#64748b" font-family="Courier New" font-weight="700">SHOWERS</text>
+
+<!-- IDF CLOSET -->
+<rect x="1010" y="20" width="110" height="70" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+<text x="1065" y="40" text-anchor="middle" font-size="9" font-weight="700" fill="#713f12" font-family="Courier New">IDF CLOSET</text>
+<text x="1065" y="53" text-anchor="middle" font-size="7" fill="#854d0e" font-family="Courier New">Third Floor</text>
+<g transform="translate(1025,60)"><rect width="25" height="16" rx="2" fill="#166534" stroke="#14532d" stroke-width="1"/><rect x="2" y="3" width="4" height="10" rx="1" fill="#4ade80"/><rect x="8" y="3" width="4" height="10" rx="1" fill="#4ade80"/><rect x="14" y="3" width="4" height="10" rx="1" fill="#86efac"/><rect x="20" y="3" width="3" height="10" rx="1" fill="#4ade80"/><text x="12" y="28" text-anchor="middle" font-size="5" fill="#166534" font-family="Courier New">L2 SW</text></g>
+
+<!-- FIRE EXIT -->
+<rect x="1125" y="20" width="110" height="70" fill="#fee2e2" stroke="#ef4444" stroke-width="1.5"/>
+<text x="1180" y="55" text-anchor="middle" font-size="9" fill="#991b1b" font-family="Courier New" font-weight="700">FIRE EXIT</text>
+<text x="1180" y="70" text-anchor="middle" font-size="8" fill="#991b1b" font-family="Courier New" font-weight="700">EMERGENCY</text>
+
+<!-- STAIRWELL -->
+<rect x="15" y="530" width="90" height="140" fill="#e5e7eb" stroke="#555" stroke-width="1.5" stroke-dasharray="4,2"/>
+<text x="60" y="595" text-anchor="middle" font-size="9" fill="#555" font-family="Courier New" font-weight="700">STAIR</text><text x="60" y="610" text-anchor="middle" font-size="9" fill="#555" font-family="Courier New" font-weight="700">WELL</text>
+<line x1="15" y1="550" x2="105" y2="550" stroke="#999" stroke-width="0.8"/>
+<line x1="15" y1="570" x2="105" y2="570" stroke="#999" stroke-width="0.8"/>
+<line x1="15" y1="590" x2="105" y2="590" stroke="#999" stroke-width="0.8"/>
+<line x1="15" y1="610" x2="105" y2="610" stroke="#999" stroke-width="0.8"/>
+<line x1="15" y1="630" x2="105" y2="630" stroke="#999" stroke-width="0.8"/>
+<line x1="15" y1="650" x2="105" y2="650" stroke="#999" stroke-width="0.8"/>
+
+<text x="1290" y="670" text-anchor="end" font-size="9" fill="#999" font-family="Courier New">XYZ Engineering College | Hostel Block | THIRD FLOOR | VLAN 80 | ~600 Students</text>
+
+</svg>
+</div>
+
+<!-- LEGEND -->
+<div class="legend">
+  <div class="legend-title">🏠 Device Icon Legend — Hostel Block (All Floors)</div>
+  <div class="legend-item"><svg class="legend-icon" viewBox="0 0 20 20"><rect width="18" height="13" x="1" y="1" rx="1" fill="#1d4ed8" stroke="#1e3a8a" stroke-width="0.8"/><rect x="3" y="3" width="14" height="8" rx="0.5" fill="#93c5fd"/><rect x="6" y="12" width="8" height="2" fill="#3b82f6"/></svg><span>PC — Staff Workstation (Reception/Warden)</span></div>
+  <div class="legend-item"><svg class="legend-icon" viewBox="0 0 20 20"><rect width="18" height="10" x="1" y="5" rx="3" fill="#166534" stroke="#14532d" stroke-width="1"/><rect x="4" y="8" width="3" height="5" rx="1" fill="#4ade80"/><rect x="9" y="8" width="3" height="5" rx="1" fill="#4ade80"/><rect x="14" y="8" width="3" height="5" rx="1" fill="#86efac"/></svg><span>SW — Network Switch (green)</span></div>
+  <div class="legend-item"><svg class="legend-icon" viewBox="0 0 20 20"><circle cx="10" cy="9" r="9" fill="#7c3aed" stroke="#5b21b6" stroke-width="1"/><path d="M5 9 Q10 3 15 9" fill="none" stroke="#fff" stroke-width="1.5"/></svg><span>WAP — WiFi Access Point (purple) — per room</span></div>
+  <div class="legend-item"><svg class="legend-icon" viewBox="0 0 20 20"><rect width="14" height="10" x="3" y="5" rx="2" fill="#0369a1" stroke="#075985" stroke-width="0.8"/><circle cx="10" cy="10" r="3" fill="#7dd3fc"/><circle cx="10" cy="10" r="1.5" fill="#0c4a6e"/></svg><span>CCTV — Security Camera (corridors)</span></div>
+  <div class="legend-item"><svg class="legend-icon" viewBox="0 0 20 20"><rect width="16" height="12" x="2" y="4" rx="2" fill="#be185d" stroke="#9d174d" stroke-width="1"/><rect x="5" y="7" width="10" height="5" rx="1" fill="#fdf2f8"/><rect x="7" y="14" width="6" height="2" rx="1" fill="#fbcfe8"/></svg><span>PRT — Printer</span></div>
+</div>
+
+</div>
+
+<script>
+function scrollToFloor(floor) {
+  const element = document.getElementById(floor + '-floor');
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    const statusDiv = document.getElementById('floor-status');
+    if (floor === 'ground') statusDiv.innerHTML = '📍 Currently viewing: GROUND FLOOR — Reception + Warden Office + Common Room + Dining Hall + Laundry + 8 Student Rooms';
+    if (floor === 'first') statusDiv.innerHTML = '📍 Currently viewing: FIRST FLOOR — Study Area + Pantry + Recreation Room + Laundry + 14 Student Rooms';
+    if (floor === 'second') statusDiv.innerHTML = '📍 Currently viewing: SECOND FLOOR — 27 Student Rooms';
+    if (floor === 'third') statusDiv.innerHTML = '📍 Currently viewing: THIRD FLOOR — 27 Student Rooms';
+  }
+}
+</script>
+
+<script src="network_standards.js"></script>
+</body>
+</html>
